@@ -1,0 +1,2152 @@
+[
+    {
+        "name": "music.search",
+        "description": "# 搜索歌曲，来首歌，我想听歌\ndef music.search(song: string, musician: string, list: string, album: string, ranking: string, instrument: string, style: string, language: string, times: string, emotion: string, scene: string, gender: string, free: boolean):\n# song: 歌曲名\n# musician: 歌手\n# list: 歌单\n# album: 专辑\n# ranking: 排行榜\n# instrument: 乐器\n# style: 风格\n# language: 语言\n# times: 年代\n# emotion: 心情\n# scene: 场景\n# gender: 性别\n# free: 是否免费",
+        "qa": [
+            {
+                "Q": "我想听周杰伦的《七里香》",
+                "A": "music.search(song = 七里香, musician = 周杰伦)"
+            },
+            {
+                "Q": "播放王菲的《红豆》",
+                "A": "music.search(song = 红豆, musician = 王菲)"
+            },
+            {
+                "Q": "我想听周杰伦的《七里香》",
+                "A": "music.search(song = 七里香, musician = 周杰伦)"
+            },
+            {
+                "Q": "播放王菲的《红豆》",
+                "A": "music.search(song = 红豆, musician = 王菲)"
+            },
+            {
+                "Q": "找一下《告白气球》的免费版本",
+                "A": "music.search(song = 告白气球, free = True)"
+            },
+            {
+                "Q": "我想听《Shape of You》这首歌",
+                "A": "music.search(song = Shape of You)"
+            },
+            {
+                "Q": "播放《夜曲》这首歌，不要版权的",
+                "A": "music.search(song = 夜曲, free = True)"
+            },
+            {
+                "Q": "我想听《演员》这首歌",
+                "A": "music.search(song = 演员)"
+            },
+            {
+                "Q": "帮我播放《抖音音乐热门歌曲2023》榜单的免费歌曲",
+                "A": "music.search(list = 抖音音乐热门歌曲2023, free = True)"
+            },
+            {
+                "Q": "能找到<周杰伦>演唱的《晴天》吗？",
+                "A": "music.search(song = 晴天, musician = 周杰伦)"
+            },
+            {
+                "Q": "我今天特别想听<林俊杰>的《江南》，能帮我找到吗？",
+                "A": "music.search(song = 江南, musician = 林俊杰)"
+            },
+            {
+                "Q": "你知道哪里可以播放<蔡依林>的《日不落》吗？",
+                "A": "music.search(song = 日不落, musician = 蔡依林)"
+            },
+            {
+                "Q": "推荐一首<李宇春>的《和你一样》，正适合现在的心情",
+                "A": "music.search(song = 和你一样, musician = 李宇春, emotion = 现在的心情)"
+            },
+            {
+                "Q": "帮我放一放<王力宏>的《我们》",
+                "A": "music.search(song = 我们, musician = 王力宏)"
+            },
+            {
+                "Q": "来一首<邓紫棋>的《泡沫》吧，这首歌太经典了",
+                "A": "music.search(song = 泡沫, musician = 邓紫棋)"
+            },
+            {
+                "Q": "有<五月天>的《恋爱ing》可以听吗？",
+                "A": "music.search(song = 恋爱ing, musician = 五月天)"
+            },
+            {
+                "Q": "给我找找<张学友>的《她来听我的演唱会》，很久没听了",
+                "A": "music.search(song = 她来听我的演唱会, musician = 张学友)"
+            },
+            {
+                "Q": "今天我有点伤心，来首<陈奕迅>的《稳稳的幸福》，这首歌真能治愈",
+                "A": "music.search(song = 稳稳的幸福, musician = 陈奕迅, emotion = 伤心)"
+            },
+            {
+                "Q": "放一首<李健>的《贝加尔湖畔》吧，这旋律真是迷人",
+                "A": "music.search(song = 贝加尔湖畔, musician = 李健)"
+            },
+            {
+                "Q": "能不能听一首<朴树>的《平凡之路》？这首歌对我很有意义",
+                "A": "music.search(song = 平凡之路, musician = 朴树)"
+            },
+            {
+                "Q": "我想找一找<汪峰>的《怒放的生命》，今天很沮丧，正需要点力量",
+                "A": "music.search(song = 怒放的生命, musician = 汪峰, emotion = 沮丧)"
+            },
+            {
+                "Q": "播放<赵雷>的《南方姑娘》，这首歌真的很有情怀",
+                "A": "music.search(song = 南方姑娘, musician = 赵雷)"
+            },
+            {
+                "Q": "有没有<薛之谦>的《演员》？这歌唱得真心不错",
+                "A": "music.search(song = 演员, musician = 薛之谦)"
+            },
+            {
+                "Q": "找一下<李宗盛>的《山丘》，经典不容错过",
+                "A": "music.search(song = 山丘, musician = 李宗盛)"
+            },
+            {
+                "Q": "能否来一首<周杰伦>的《双截棍》？",
+                "A": "music.search(song = 双截棍, musician = 周杰伦)"
+            },
+            {
+                "Q": "帮我找一下<陈奕迅>的《十年》，谢谢！",
+                "A": "music.search(song = 十年, musician = 陈奕迅)"
+            },
+            {
+                "Q": "有没有<林俊杰>的《江南》可以听？",
+                "A": "music.search(song = 江南, musician = 林俊杰)"
+            },
+            {
+                "Q": "给我推荐一首<李宇春>的《下个，路口，见》吧",
+                "A": "music.search(song = 下个，路口，见, musician = 李宇春)"
+            },
+            {
+                "Q": "麻烦给我播放<王力宏>的《龙的传人》",
+                "A": "music.search(song = 龙的传人, musician = 王力宏)"
+            },
+            {
+                "Q": "有适合安静听的<五月天>的《知足》吗？",
+                "A": "music.search(song = 知足, musician = 五月天, scene = 安静)"
+            },
+            {
+                "Q": "播放一下<邓紫棋>的《泡沫》吧",
+                "A": "music.search(song = 泡沫, musician = 邓紫棋)"
+            },
+            {
+                "Q": "想听听<蔡依林>的《舞娘》，能找到吗？",
+                "A": "music.search(song = 舞娘, musician = 蔡依林)"
+            },
+            {
+                "Q": "来一首<张学友>的《吻别》怎么样？",
+                "A": "music.search(song = 吻别, musician = 张学友)"
+            },
+            {
+                "Q": "给我放一首<黄龄>的《痒》来听听",
+                "A": "music.search(song = 痒, musician = 黄龄)"
+            },
+            {
+                "Q": "有没有<李健>的《传奇》？",
+                "A": "music.search(song = 传奇, musician = 李健)"
+            },
+            {
+                "Q": "我想放松一下，听听<朴树>的《那些花儿》",
+                "A": "music.search(song = 那些花儿, musician = 朴树, emotion = 放松)"
+            },
+            {
+                "Q": "帮我找找<汪峰>的《存在》",
+                "A": "music.search(song = 存在, musician = 汪峰)"
+            },
+            {
+                "Q": "能不能播放<赵雷>的《成都》？",
+                "A": "music.search(song = 成都, musician = 赵雷)"
+            },
+            {
+                "Q": "给我推荐一首<薛之谦>的《绅士》",
+                "A": "music.search(song = 绅士, musician = 薛之谦)"
+            },
+            {
+                "Q": "让我回味一下<李宗盛>的《凡人歌》",
+                "A": "music.search(song = 凡人歌, musician = 李宗盛)"
+            },
+            {
+                "Q": "有没有适合摇滚迷的《Rolling in the Deep》？",
+                "A": "music.search(song = Rolling in the Deep, style = 摇滚)"
+            },
+            {
+                "Q": "来一首爵士风的《Take Five》吧",
+                "A": "music.search(song = Take Five, style = 爵士)"
+            },
+            {
+                "Q": "想听点古典的，能找到《Moonlight Sonata》吗？",
+                "A": "music.search(song = Moonlight Sonata, style = 古典)"
+            },
+            {
+                "Q": "有没有节奏感强的流行歌《Someone Like You》？",
+                "A": "music.search(song = Someone Like You, style = 流行)"
+            },
+            {
+                "Q": "找一首说唱风格的《Sicko Mode》来听",
+                "A": "music.search(song = Sicko Mode, style = 说唱)"
+            },
+            {
+                "Q": "给我推荐一首R&B的《Blinding Lights》",
+                "A": "music.search(song = Blinding Lights, style = R&B)"
+            },
+            {
+                "Q": "有没有让人放松的电子乐《Faded》？",
+                "A": "music.search(song = Faded, style = 电子, emotion = 放松)"
+            },
+            {
+                "Q": "能播放一首民谣的《南山南》吗？",
+                "A": "music.search(song = 南山南, style = 民谣)"
+            },
+            {
+                "Q": "想听一首抒情的《A Thousand Years》",
+                "A": "music.search(song = A Thousand Years, style = 抒情)"
+            },
+            {
+                "Q": "给我来一首轻音乐《Canon in D》",
+                "A": "music.search(song = Canon in D, style = 轻音乐)"
+            },
+            {
+                "Q": "有没有经典摇滚《Bohemian Rhapsody》？",
+                "A": "music.search(song = Bohemian Rhapsody, style = 经典摇滚)"
+            },
+            {
+                "Q": "找找看有没有乡村音乐《Take Me Home, Country Roads》",
+                "A": "music.search(song = Take Me Home, Country Roads, style = 乡村)"
+            },
+            {
+                "Q": "能找到蓝调风格的《The Thrill is Gone》吗？",
+                "A": "music.search(song = The Thrill is Gone, style = 蓝调)"
+            },
+            {
+                "Q": "来首复古迪斯科的《Stayin' Alive》怎么样？",
+                "A": "music.search(song = Stayin' Alive, style = 复古迪斯科)"
+            },
+            {
+                "Q": "推荐一首灵魂乐《A Change is Gonna Come》",
+                "A": "music.search(song = A Change is Gonna Come, style = 灵魂乐)"
+            },
+            {
+                "Q": "工作时听什么好？《Weightless》怎么样？",
+                "A": "music.search(song = Weightless, scene = 工作)"
+            },
+            {
+                "Q": "推荐一首适合心情好时听的歌，比如《Happy》",
+                "A": "music.search(song = Happy, emotion = 心情好)"
+            },
+            {
+                "Q": "有什么适合深夜听的歌吗？比如《夜空中最亮的星》",
+                "A": "music.search(song = 夜空中最亮的星, scene = 深夜)"
+            },
+            {
+                "Q": "开车时听《Drive》怎么样？",
+                "A": "music.search(song = Drive, scene = 开车)"
+            },
+            {
+                "Q": "有没有激励人心的歌，比如《Stronger》？",
+                "A": "music.search(song = Stronger, emotion = 激励人心)"
+            },
+            {
+                "Q": "聚会时听《Uptown Funk》如何？",
+                "A": "music.search(song = Uptown Funk, scene = 聚会)"
+            },
+            {
+                "Q": "找一首放松的歌，像《Banana Pancakes》",
+                "A": "music.search(song = Banana Pancakes, emotion = 放松)"
+            },
+            {
+                "Q": "有推荐的治愈系歌曲吗？《温柔》不错吧？",
+                "A": "music.search(song = 温柔, style = 治愈系)"
+            },
+            {
+                "Q": "悲伤的时候，听《Someone Like You》合适吗？",
+                "A": "music.search(song = Someone Like You, emotion = 悲伤)"
+            },
+            {
+                "Q": "跑步时听《Can't Stop the Feeling!》吧",
+                "A": "music.search(song = Can't Stop the Feeling!, scene = 跑步)"
+            },
+            {
+                "Q": "有没有怀旧的经典，比如《Hotel California》？",
+                "A": "music.search(song = Hotel California, emotion = 怀旧)"
+            },
+            {
+                "Q": "想营造浪漫气氛，推荐《Perfect》如何？",
+                "A": "music.search(song = Perfect, emotion = 浪漫)"
+            },
+            {
+                "Q": "找一首活力满满的歌，比如《Shake It Off》",
+                "A": "music.search(song = Shake It Off, emotion = 活力)"
+            },
+            {
+                "Q": "有没有适合安静阅读时听的歌？《Clair de Lune》如何？",
+                "A": "music.search(song = Clair de Lune, scene = 安静阅读)"
+            },
+            {
+                "Q": "雨天时听《November Rain》合适吗？",
+                "A": "music.search(song = November Rain, scene = 雨天)"
+            },
+            {
+                "Q": "想听英文歌，《Shape of You》不错吧？",
+                "A": "music.search(song = Shape of You, language = 英文)"
+            },
+            {
+                "Q": "推荐一首法语歌，比如《La Vie en Rose》",
+                "A": "music.search(song = La Vie en Rose, language = 法语)"
+            },
+            {
+                "Q": "来一首韩语歌《Gangnam Style》如何？",
+                "A": "music.search(song = Gangnam Style, language = 韩语)"
+            },
+            {
+                "Q": "找找西班牙语的《Despacito》来听",
+                "A": "music.search(song = Despacito, language = 西班牙语)"
+            },
+            {
+                "Q": "日语歌《Lemon》怎么样？",
+                "A": "music.search(song = Lemon, language = 日语)"
+            },
+            {
+                "Q": "播放一首意大利语的《Con Te Partirò》吧",
+                "A": "music.search(song = Con Te Partirò, language = 意大利语)"
+            },
+            {
+                "Q": "有没有好听的俄语歌？试试《Kalinka》",
+                "A": "music.search(song = Kalinka, language = 俄语)"
+            },
+            {
+                "Q": "德语歌《99 Luftballons》怎么样？",
+                "A": "music.search(song = 99 Luftballons, language = 德语)"
+            },
+            {
+                "Q": "推荐一首葡萄牙语歌《Garota de Ipanema》",
+                "A": "music.search(song = Garota de Ipanema, language = 葡萄牙语)"
+            },
+            {
+                "Q": "有没有印度的歌曲《Jai Ho》可以听？",
+                "A": "music.search(song = Jai Ho, language = 印度语)"
+            },
+            {
+                "Q": "来首阿拉伯歌曲《Tamally Maak》怎么样？",
+                "A": "music.search(song = Tamally Maak, language = 阿拉伯语)"
+            },
+            {
+                "Q": "粤语经典《真的爱你》可以听吗？",
+                "A": "music.search(song = 真的爱你, language = 粤语)"
+            },
+            {
+                "Q": "台湾民谣《外婆的澎湖湾》如何？",
+                "A": "music.search(song = 外婆的澎湖湾, language = 闽南语)"
+            },
+            {
+                "Q": "推荐一首闽南语歌《爱拼才会赢》",
+                "A": "music.search(song = 爱拼才会赢, language = 闽南语)"
+            },
+            {
+                "Q": "香港经典《上海滩》要不要来一首？",
+                "A": "music.search(song = 上海滩, language = 粤语)"
+            },
+            {
+                "Q": "80年代的经典《Billie Jean》怎么样？",
+                "A": "music.search(song = Billie Jean, times = 80年代)"
+            },
+            {
+                "Q": "找一首90年代的歌，比如《Smells Like Teen Spirit》",
+                "A": "music.search(song = Smells Like Teen Spirit, times = 90年代)"
+            },
+            {
+                "Q": "有没有70年代的好歌？《Stairway to Heaven》不错",
+                "A": "music.search(song = Stairway to Heaven, times = 70年代)"
+            },
+            {
+                "Q": "来一首60年代的《The Sound of Silence》吧",
+                "A": "music.search(song = The Sound of Silence, times = 60年代)"
+            },
+            {
+                "Q": "2000年代的《In the End》能不能播放？",
+                "A": "music.search(song = In the End, times = 2000年代)"
+            },
+            {
+                "Q": "推荐一首2010年代的《Rolling in the Deep》",
+                "A": "music.search(song = Rolling in the Deep, times = 2010年代)"
+            },
+            {
+                "Q": "50年代的《Johnny B. Goode》还记得吗？",
+                "A": "music.search(song = Johnny B. Goode, times = 50年代)"
+            },
+            {
+                "Q": "想听听40年代的《Take the A Train》",
+                "A": "music.search(song = Take the A Train, times = 40年代)"
+            },
+            {
+                "Q": "有没有30年代的经典，《Summertime》如何？",
+                "A": "music.search(song = Summertime, times = 30年代)"
+            },
+            {
+                "Q": "2020年代的《Blinding Lights》怎么样？",
+                "A": "music.search(song = Blinding Lights, times = 2020年代)"
+            },
+            {
+                "Q": "《Billboard Hot 100》上有哪些免费歌曲？",
+                "A": "music.search(ranking = Billboard Hot 100, free = True)"
+            },
+            {
+                "Q": "Spotify榜单上的热门歌曲是什么？",
+                "A": "music.search(ranking = Spotify榜单)"
+            },
+            {
+                "Q": "找一下《UK Top 40》里的免费歌曲",
+                "A": "music.search(ranking = UK Top 40, free = True)"
+            },
+            {
+                "Q": "iTunes榜单上有什么好歌？",
+                "A": "music.search(ranking = iTunes榜单)"
+            },
+            {
+                "Q": "全球热歌榜上有什么推荐？",
+                "A": "music.search(ranking = 全球热歌榜)"
+            },
+            {
+                "Q": "周杰伦的《魔杰座》专辑怎么样？",
+                "A": "music.search(album = 魔杰座, musician = 周杰伦)"
+            },
+            {
+                "Q": "抖音热歌榜上有免费歌曲吗？",
+                "A": "music.search(ranking = 抖音热歌榜, free = True)"
+            },
+            {
+                "Q": "年度最佳单曲榜上有什么好听的？",
+                "A": "music.search(ranking = 年度最佳单曲榜)"
+            },
+            {
+                "Q": "网易云新歌榜上有什么推荐？",
+                "A": "music.search(ranking = 网易云新歌榜)"
+            },
+            {
+                "Q": "流行金曲榜上的免费歌有哪些？",
+                "A": "music.search(ranking = 流行金曲榜, free = True)"
+            },
+            {
+                "Q": "QQ音乐巅峰榜有什么好歌？",
+                "A": "music.search(ranking = QQ音乐巅峰榜)"
+            },
+            {
+                "Q": "KTV金曲榜上有哪些经典？",
+                "A": "music.search(ranking = KTV金曲榜)"
+            },
+            {
+                "Q": "华语金曲榜里的经典歌曲有哪些？",
+                "A": "music.search(ranking = 华语金曲榜)"
+            },
+            {
+                "Q": "Billboard 200专辑榜上的歌曲推荐一下",
+                "A": "music.search(ranking = Billboard 200专辑榜)"
+            },
+            {
+                "Q": "Apple Music排行榜上有什么好听的？",
+                "A": "music.search(ranking = Apple Music排行榜)"
+            },
+            {
+                "Q": "《七里香》有免费版本吗？",
+                "A": "music.search(song = 七里香, free = True)"
+            },
+            {
+                "Q": "能找到《爱你一万年》这首歌吗？",
+                "A": "music.search(song = 爱你一万年)"
+            },
+            {
+                "Q": "听说《Hotel California》很好听，能播放吗？",
+                "A": "music.search(song = Hotel California)"
+            },
+            {
+                "Q": "《Imagine》有经典版本吗？",
+                "A": "music.search(song = Imagine)"
+            },
+            {
+                "Q": "帮我找一首不需收费的《朋友》",
+                "A": "music.search(song = 朋友, free = True)"
+            },
+            {
+                "Q": "《不再犹豫》是经典，能播放吗？",
+                "A": "music.search(song = 不再犹豫)"
+            },
+            {
+                "Q": "有没有节奏感强的《Uptown Funk》？",
+                "A": "music.search(song = Uptown Funk)"
+            },
+            {
+                "Q": "找一下免费的《Billie Jean》",
+                "A": "music.search(song = Billie Jean, free = True)"
+            },
+            {
+                "Q": "《Waka Waka》是世界音乐，有兴趣听吗？",
+                "A": "music.search(song = Waka Waka, style = 世界音乐)"
+            },
+            {
+                "Q": "来一首经典的《My Way》吧",
+                "A": "music.search(song = My Way)"
+            },
+            {
+                "Q": "轻松愉快的《Good Life》适合现在的心情",
+                "A": "music.search(song = Good Life, emotion = 轻松愉快)"
+            },
+            {
+                "Q": "有没有免费的《Bohemian Rhapsody》版本？",
+                "A": "music.search(song = Bohemian Rhapsody, free = True)"
+            },
+            {
+                "Q": "《昨日重现》这首歌能找到吗？",
+                "A": "music.search(song = 昨日重现)"
+            },
+            {
+                "Q": "帮我找一下《Beat It》的免费版本",
+                "A": "music.search(song = Beat It, free = True)"
+            },
+            {
+                "Q": "《Blue》这首歌是不是很经典？我想听听看",
+                "A": "music.search(song = Blue)"
+            },
+            {
+                "Q": "能不能给我找一首钢琴演奏的《卡农》？",
+                "A": "music.search(song = 卡农, instrument = 钢琴)"
+            },
+            {
+                "Q": "推荐一首吉他弹唱的《Hotel California》",
+                "A": "music.search(song = Hotel California, instrument = 吉他)"
+            },
+            {
+                "Q": "有没有小提琴演奏的《四季》可以听？",
+                "A": "music.search(song = 四季, instrument = 小提琴)"
+            },
+            {
+                "Q": "播放一首萨克斯风演奏的《Careless Whisper》",
+                "A": "music.search(song = Careless Whisper, instrument = 萨克斯风)"
+            },
+            {
+                "Q": "我想听一段长笛演奏的《Canon in D》",
+                "A": "music.search(song = Canon in D, instrument = 长笛)"
+            },
+            {
+                "Q": "有没有竖琴演奏的《月光》可以推荐？",
+                "A": "music.search(song = 月光, instrument = 竖琴)"
+            },
+            {
+                "Q": "来一首口琴演奏的《Yesterday》吧",
+                "A": "music.search(song = Yesterday, instrument = 口琴)"
+            },
+            {
+                "Q": "能播放一段大提琴演奏的《巴赫无伴奏大提琴组曲》吗？",
+                "A": "music.search(song = 巴赫无伴奏大提琴组曲, instrument = 大提琴)"
+            },
+            {
+                "Q": "推荐一首尤克里里演奏的《Somewhere Over the Rainbow》",
+                "A": "music.search(song = Somewhere Over the Rainbow, instrument = 尤克里里)"
+            },
+            {
+                "Q": "播放一首鼓乐演奏的《We Will Rock You》",
+                "A": "music.search(song = We Will Rock You, instrument = 鼓)"
+            },
+            {
+                "Q": "我想听一段管风琴演奏的《Toccata and Fugue in D minor》",
+                "A": "music.search(song = Toccata and Fugue in D minor, instrument = 管风琴)"
+            },
+            {
+                "Q": "有没有古筝演奏的《高山流水》可以听？",
+                "A": "music.search(song = 高山流水, instrument = 古筝)"
+            },
+            {
+                "Q": "播放一段二胡演奏的《二泉映月》",
+                "A": "music.search(song = 二泉映月, instrument = 二胡)"
+            },
+            {
+                "Q": "推荐一首电子琴演奏的《Take on Me》",
+                "A": "music.search(song = Take on Me, instrument = 电子琴)"
+            },
+            {
+                "Q": "来一首手风琴演奏的《La Vie en Rose》吧",
+                "A": "music.search(song = La Vie en Rose, instrument = 手风琴)"
+            },
+            {
+                "Q": "有没有适合深夜听的钢琴演奏曲？",
+                "A": "music.search(instrument = 钢琴, scene = 深夜)"
+            },
+            {
+                "Q": "我想放松一下，来首吉他弹奏的轻音乐",
+                "A": "music.search(instrument = 吉他, style = 轻音乐)"
+            },
+            {
+                "Q": "推荐一段适合工作时听的小提琴曲",
+                "A": "music.search(instrument = 小提琴, scene = 工作)"
+            },
+            {
+                "Q": "有没有适合安静阅读时听的萨克斯风曲？",
+                "A": "music.search(instrument = 萨克斯风, scene = 安静阅读)"
+            },
+            {
+                "Q": "找一首适合聚会背景音乐的鼓乐",
+                "A": "music.search(instrument = 鼓, scene = 聚会)"
+            },
+            {
+                "Q": "我想在雨天听一段古筝演奏的曲子",
+                "A": "music.search(instrument = 古筝, scene = 雨天)"
+            },
+            {
+                "Q": "来一段适合跑步时听的电吉他独奏",
+                "A": "music.search(instrument = 电吉他, scene = 跑步)"
+            },
+            {
+                "Q": "有没有适合冥想时听的长笛曲？",
+                "A": "music.search(instrument = 长笛, scene = 冥想)"
+            },
+            {
+                "Q": "推荐一首适合早晨听的口琴演奏曲",
+                "A": "music.search(instrument = 口琴, scene = 早晨)"
+            },
+            {
+                "Q": "我想在冬天的晚上听一段大提琴曲",
+                "A": "music.search(instrument = 大提琴, scene = 冬天的晚上)"
+            },
+            {
+                "Q": "播放一首适合浪漫晚餐的竖琴演奏",
+                "A": "music.search(instrument = 竖琴, scene = 浪漫晚餐)"
+            },
+            {
+                "Q": "找一段适合旅行时听的手风琴演奏曲",
+                "A": "music.search(instrument = 手风琴, scene = 旅行)"
+            },
+            {
+                "Q": "我想在咖啡馆里放一首电子琴演奏的背景音乐",
+                "A": "music.search(instrument = 电子琴, scene = 咖啡馆)"
+            },
+            {
+                "Q": "有没有适合沙滩派对的尤克里里曲？",
+                "A": "music.search(instrument = 尤克里里, scene = 沙滩派对)"
+            },
+            {
+                "Q": "来一段适合晨跑的打击乐演奏曲吧",
+                "A": "music.search(instrument = 打击乐, scene = 晨跑)"
+            },
+            {
+                "Q": "播放一首摇滚风格的电吉他独奏",
+                "A": "music.search(instrument = 电吉他, style = 摇滚)"
+            },
+            {
+                "Q": "推荐一段爵士风的萨克斯演奏曲",
+                "A": "music.search(instrument = 萨克斯风, style = 爵士)"
+            },
+            {
+                "Q": "有没有古典风格的小提琴演奏曲？",
+                "A": "music.search(instrument = 小提琴, style = 古典)"
+            },
+            {
+                "Q": "我想听一段流行音乐的钢琴改编版",
+                "A": "music.search(instrument = 钢琴, style = 流行音乐改编)"
+            },
+            {
+                "Q": "来一段说唱风格的打击乐演奏曲吧",
+                "A": "music.search(instrument = 打击乐, style = 说唱)"
+            },
+            {
+                "Q": "播放一首R&B风格的电子琴演奏曲",
+                "A": "music.search(instrument = 电子琴, style = R&B)"
+            },
+            {
+                "Q": "找一首民谣风的吉他弹唱",
+                "A": "music.search(instrument = 吉他, style = 民谣)"
+            },
+            {
+                "Q": "有没有电子音乐风格的合成器演奏曲？",
+                "A": "music.search(instrument = 合成器, style = 电子音乐)"
+            },
+            {
+                "Q": "推荐一首抒情风格的长笛演奏曲",
+                "A": "music.search(instrument = 长笛, style = 抒情)"
+            },
+            {
+                "Q": "播放一首蓝调风格的口琴演奏曲",
+                "A": "music.search(instrument = 口琴, style = 蓝调)"
+            },
+            {
+                "Q": "来一首乡村风格的班卓琴演奏曲吧",
+                "A": "music.search(instrument = 班卓琴, style = 乡村)"
+            },
+            {
+                "Q": "我想听一段复古迪斯科风的合成器演奏",
+                "A": "music.search(instrument = 合成器, style = 复古迪斯科)"
+            },
+            {
+                "Q": "找一段灵魂乐风格的大提琴演奏曲",
+                "A": "music.search(instrument = 大提琴, style = 灵魂乐)"
+            },
+            {
+                "Q": "推荐一首朋克风的贝斯演奏曲",
+                "A": "music.search(instrument = 贝斯, style = 朋克)"
+            },
+            {
+                "Q": "来一段哥特风的管风琴演奏曲吧",
+                "A": "music.search(instrument = 管风琴, style = 哥特)"
+            },
+            {
+                "Q": "播放一首中国传统乐器古筝演奏的曲子",
+                "A": "music.search(instrument = 古筝, style = 中国传统)"
+            },
+            {
+                "Q": "有没有印度西塔琴演奏的经典曲目？",
+                "A": "music.search(instrument = 西塔琴, style = 印度传统)"
+            },
+            {
+                "Q": "推荐一首日本尺八演奏的传统音乐",
+                "A": "music.search(instrument = 尺八, style = 日本传统)"
+            },
+            {
+                "Q": "来一段爱尔兰风笛演奏的民族音乐吧",
+                "A": "music.search(instrument = 风笛, style = 爱尔兰民族)"
+            },
+            {
+                "Q": "播放一首阿根廷探戈风格的手风琴演奏",
+                "A": "music.search(instrument = 手风琴, style = 阿根廷探戈)"
+            },
+            {
+                "Q": "有没有中东乌德琴演奏的传统音乐可以听？",
+                "A": "music.search(instrument = 乌德琴, style = 中东传统)"
+            },
+            {
+                "Q": "推荐一段西班牙弗拉门戈吉他演奏曲",
+                "A": "music.search(instrument = 吉他, style = 西班牙弗拉门戈)"
+            },
+            {
+                "Q": "找一首非洲鼓演奏的传统曲目",
+                "A": "music.search(instrument = 非洲鼓, style = 非洲传统)"
+            },
+            {
+                "Q": "播放一段巴西萨克斯风演奏的桑巴音乐",
+                "A": "music.search(instrument = 萨克斯风, style = 桑巴)"
+            },
+            {
+                "Q": "来一段加勒比钢鼓演奏的音乐吧",
+                "A": "music.search(instrument = 钢鼓, style = 加勒比)"
+            },
+            {
+                "Q": "我想听一段澳大利亚迪吉里杜管演奏的音乐",
+                "A": "music.search(instrument = 迪吉里杜管, style = 澳大利亚传统)"
+            },
+            {
+                "Q": "播放一首俄罗斯巴拉莱卡琴演奏的民间乐曲",
+                "A": "music.search(instrument = 巴拉莱卡琴, style = 俄罗斯民间)"
+            },
+            {
+                "Q": "有没有希腊布祖基琴演奏的传统曲子？",
+                "A": "music.search(instrument = 布祖基琴, style = 希腊传统)"
+            },
+            {
+                "Q": "推荐一段法国手风琴演奏的香颂音乐",
+                "A": "music.search(instrument = 手风琴, style = 香颂)"
+            },
+            {
+                "Q": "播放一段维也纳圆号演奏的古典音乐吧",
+                "A": "music.search(instrument = 圆号, style = 古典)"
+            },
+            {
+                "Q": "播放<周杰伦>的专辑《范特西》中的歌曲",
+                "A": "music.search(musician = 周杰伦, album = 范特西)"
+            },
+            {
+                "Q": "我想听<林忆莲>专辑《爱上一个不回家的人》里的歌",
+                "A": "music.search(musician = 林忆莲, album = 爱上一个不回家的人)"
+            },
+            {
+                "Q": "帮我找<蔡依林>的专辑《Jolin 1019》中的免费歌曲<free>",
+                "A": "music.search(musician = 蔡依林, album = Jolin 1019, free = True)"
+            },
+            {
+                "Q": "播放<王菲>的专辑《天空》里的经典曲目",
+                "A": "music.search(musician = 王菲, album = 天空)"
+            },
+            {
+                "Q": "我想听男性歌手<张学友>的专辑《吻别》中的歌曲",
+                "A": "music.search(musician = 张学友, album = 吻别, gender = 男性)"
+            },
+            {
+                "Q": "播放<张靓颖>专辑《The One》中的热门歌曲",
+                "A": "music.search(musician = 张靓颖, album = The One)"
+            },
+            {
+                "Q": "帮我找一张女歌手<邓紫棋>的专辑《新的心跳》里的歌",
+                "A": "music.search(musician = 邓紫棋, album = 新的心跳, gender = 女性)"
+            },
+            {
+                "Q": "播放男性歌手<李宗盛>的经典专辑《凡人歌》中的歌曲",
+                "A": "music.search(musician = 李宗盛, album = 凡人歌, gender = 男性)"
+            },
+            {
+                "Q": "我想听女性歌手<孙燕姿>专辑《逆光》里的歌曲",
+                "A": "music.search(musician = 孙燕姿, album = 逆光, gender = 女性)"
+            },
+            {
+                "Q": "播放男性歌手<陈奕迅>专辑《认了吧》中的经典歌曲",
+                "A": "music.search(musician = 陈奕迅, album = 认了吧, gender = 男性)"
+            },
+            {
+                "Q": "帮我找女歌手<梁静茹>的专辑《崇拜》里的免费歌曲<free>",
+                "A": "music.search(musician = 梁静茹, album = 崇拜, gender = 女性, free = True)"
+            },
+            {
+                "Q": "播放男性歌手<朴树>专辑《我去2000》中的热门歌曲",
+                "A": "music.search(musician = 朴树, album = 我去2000, gender = 男性)"
+            },
+            {
+                "Q": "我想听女歌手<阿桑>专辑《寂寞在唱歌》里的歌曲",
+                "A": "music.search(musician = 阿桑, album = 寂寞在唱歌, gender = 女性)"
+            },
+            {
+                "Q": "播放男性歌手<林俊杰>专辑《和自己对话》中的经典歌曲",
+                "A": "music.search(musician = 林俊杰, album = 和自己对话, gender = 男性)"
+            },
+            {
+                "Q": "帮我找一张女性歌手<田馥甄>的专辑《To Hebe》里的歌曲",
+                "A": "music.search(musician = 田馥甄, album = To Hebe, gender = 女性)"
+            }
+        ]
+    },
+    {
+        "name": "music.player.play",
+        "description": "# 音乐播放控制\ndef music.player.play(mode: boolean):\n# mode: 暂停/继续播放，False为暂停，True为播放",
+        "qa": [
+            {
+                "Q": "播放音乐",
+                "A": "music.player.play(mode = True)"
+            },
+            {
+                "Q": "暂停音乐",
+                "A": "music.player.play(mode = True)"
+            },
+            {
+                "Q": "继续播放音乐",
+                "A": "music.player.play(mode = True)"
+            },
+            {
+                "Q": "暂停当前播放的歌曲",
+                "A": "music.player.play(mode = False)"
+            },
+            {
+                "Q": "继续播放当前歌曲",
+                "A": "music.player.play(mode = True)"
+            },
+            {
+                "Q": "播放音乐，继续",
+                "A": "music.player.play(mode = True)"
+            },
+            {
+                "Q": "暂停歌曲播放",
+                "A": "music.player.play(mode = False)"
+            },
+            {
+                "Q": "播放当前歌曲",
+                "A": "music.player.play(mode = True)"
+            },
+            {
+                "Q": "暂停当前的音乐",
+                "A": "music.player.play(mode = False)"
+            },
+            {
+                "Q": "恢复播放音乐",
+                "A": "music.player.play(mode = True)"
+            },
+            {
+                "Q": "继续播放已暂停的歌曲",
+                "A": "music.player.play(mode = True)"
+            },
+            {
+                "Q": "暂停当前的音轨",
+                "A": "music.player.play(mode = False)"
+            },
+            {
+                "Q": "播放已暂停的歌曲",
+                "A": "music.player.play(mode = True)"
+            },
+            {
+                "Q": "音乐播放",
+                "A": "music.player.play(mode = True)"
+            },
+            {
+                "Q": "暂停歌曲",
+                "A": "music.player.play(mode = False)"
+            },
+            {
+                "Q": "继续音乐",
+                "A": "music.player.play(mode = True)"
+            },
+            {
+                "Q": "播放暂停的音乐",
+                "A": "music.player.play(mode = True)"
+            },
+            {
+                "Q": "暂停当前播放",
+                "A": "music.player.play(mode = False)"
+            },
+            {
+                "Q": "继续播放当前的音乐",
+                "A": "music.player.play(mode = True)"
+            },
+            {
+                "Q": "恢复播放当前的音乐",
+                "A": "music.player.play(mode = True)"
+            }
+        ]
+    },
+    {
+        "name": "music.player.switch",
+        "description": "# 切换播放歌曲\ndef music.player.switch(mode: integer):\n# mode: 1为下一首，-1为上一首",
+        "qa": [
+            {
+                "Q": "切换到下一首歌",
+                "A": "music.player.switch(mode = 1)"
+            },
+            {
+                "Q": "切到<下一首>歌曲",
+                "A": "music.player.switch(mode = 1)"
+            },
+            {
+                "Q": "播放下一首",
+                "A": "music.player.switch(mode = 1)"
+            },
+            {
+                "Q": "换一首歌，下一首",
+                "A": "music.player.switch(mode = 1)"
+            },
+            {
+                "Q": "跳到下一首歌曲",
+                "A": "music.player.switch(mode = 1)"
+            },
+            {
+                "Q": "播放上一首歌曲",
+                "A": "music.player.switch(mode = -1)"
+            },
+            {
+                "Q": "切到上一首歌",
+                "A": "music.player.switch(mode = -1)"
+            },
+            {
+                "Q": "播放上一首",
+                "A": "music.player.switch(mode = -1)"
+            },
+            {
+                "Q": "换回上一首歌",
+                "A": "music.player.switch(mode = -1)"
+            },
+            {
+                "Q": "跳到上一首",
+                "A": "music.player.switch(mode = -1)"
+            },
+            {
+                "Q": "下一首歌，播放",
+                "A": "music.player.switch(mode = 1)"
+            },
+            {
+                "Q": "换到下一首",
+                "A": "music.player.switch(mode = 1)"
+            },
+            {
+                "Q": "播放下一首音乐",
+                "A": "music.player.switch(mode = 1)"
+            },
+            {
+                "Q": "切到下一首音乐",
+                "A": "music.player.switch(mode = 1)"
+            },
+            {
+                "Q": "播放前一首歌",
+                "A": "music.player.switch(mode = -1)"
+            },
+            {
+                "Q": "切换到前一首",
+                "A": "music.player.switch(mode = -1)"
+            },
+            {
+                "Q": "播放前一首",
+                "A": "music.player.switch(mode = -1)"
+            },
+            {
+                "Q": "跳到前一首音乐",
+                "A": "music.player.switch(mode = -1)"
+            },
+            {
+                "Q": "播放前一首歌曲",
+                "A": "music.player.switch(mode = -1)"
+            },
+            {
+                "Q": "切回上一首",
+                "A": "music.player.switch(mode = -1)"
+            },
+            {
+                "Q": "切到前一首",
+                "A": "music.player.switch(mode = -1)"
+            }
+        ]
+    },
+    {
+        "name": "music.player.skip",
+        "description": "# 歌曲播放进度调整，快进快退\ndef music.player.skip(time: int):\n# time: 时间，正数为快进，负数快退，以秒为单位",
+        "qa": [
+            {
+                "Q": "歌曲快进<30>秒",
+                "A": "music.player.skip(time = 30)"
+            },
+            {
+                "Q": "歌曲快退<15>秒",
+                "A": "music.player.skip(time = -15)"
+            },
+            {
+                "Q": "将音乐快进<30>秒",
+                "A": "music.player.skip(time = 30)"
+            },
+            {
+                "Q": "快进<45>秒到下一段",
+                "A": "music.player.skip(time = 45)"
+            },
+            {
+                "Q": "跳过<10>秒的前奏",
+                "A": "music.player.skip(time = 10)"
+            },
+            {
+                "Q": "音乐倒退<20>秒",
+                "A": "music.player.skip(time = -20)"
+            },
+            {
+                "Q": "快进歌曲<60>秒",
+                "A": "music.player.skip(time = 60)"
+            },
+            {
+                "Q": "退回<30>秒",
+                "A": "music.player.skip(time = -30)"
+            },
+            {
+                "Q": "歌曲跳到前面<15>秒",
+                "A": "music.player.skip(time = -15)"
+            },
+            {
+                "Q": "音乐快退<25>秒",
+                "A": "music.player.skip(time = -25)"
+            },
+            {
+                "Q": "把歌曲快进<90>秒",
+                "A": "music.player.skip(time = 90)"
+            },
+            {
+                "Q": "倒退<10>秒的音乐",
+                "A": "music.player.skip(time = -10)"
+            },
+            {
+                "Q": "跳到歌曲的<1:30>处",
+                "A": "music.player.skip(time = 90)"
+            },
+            {
+                "Q": "前进<20>秒",
+                "A": "music.player.skip(time = 20)"
+            },
+            {
+                "Q": "退回<5>秒听上一段",
+                "A": "music.player.skip(time = -5)"
+            },
+            {
+                "Q": "把音乐快进<15>秒",
+                "A": "music.player.skip(time = 15)"
+            },
+            {
+                "Q": "跳到后面的<45>秒",
+                "A": "music.player.skip(time = 45)"
+            },
+            {
+                "Q": "快退<10>秒",
+                "A": "music.player.skip(time = -10)"
+            },
+            {
+                "Q": "将播放快进<20>秒",
+                "A": "music.player.skip(time = 20)"
+            },
+            {
+                "Q": "倒退到<1:00>之前",
+                "A": "music.player.skip(time = -60)"
+            }
+        ]
+    },
+    {
+        "name": "music.player.mode",
+        "description": "# 设置音乐播放模式\ndef music.player.mode(mode: string):\n# mode: 播放模式 单曲循环 随机播放 顺序播放 列表循环",
+        "qa": [
+            {
+                "Q": "设置为<单曲循环>模式",
+                "A": "music.player.mode(mode = 单曲循环播放)"
+            },
+            {
+                "Q": "播放模式切换为<随机播放>",
+                "A": "music.player.mode(mode = 随机播放)"
+            },
+            {
+                "Q": "我想设置<顺序播放>模式",
+                "A": "music.player.mode(mode = 顺序播放)"
+            },
+            {
+                "Q": "将播放模式改为<列表循环>",
+                "A": "music.player.mode(mode = 列表循环播放)"
+            },
+            {
+                "Q": "启用<单曲循环播放>",
+                "A": "music.player.mode(mode = 单曲循环播放)"
+            },
+            {
+                "Q": "切换到<随机播放>模式",
+                "A": "music.player.mode(mode = 随机播放)"
+            },
+            {
+                "Q": "将模式调整为<顺序播放>",
+                "A": "music.player.mode(mode = 顺序播放)"
+            },
+            {
+                "Q": "设定为<列表循环播放>模式",
+                "A": "music.player.mode(mode = 列表循环播放)"
+            },
+            {
+                "Q": "开启<单曲循环>",
+                "A": "music.player.mode(mode = 单曲循环播放)"
+            },
+            {
+                "Q": "切换播放模式为<随机播放>",
+                "A": "music.player.mode(mode = 随机播放)"
+            },
+            {
+                "Q": "设置成<顺序播放>模式",
+                "A": "music.player.mode(mode = 顺序播放)"
+            },
+            {
+                "Q": "使用<列表循环>模式播放",
+                "A": "music.player.mode(mode = 列表循环播放)"
+            },
+            {
+                "Q": "更改为<单曲循环>模式",
+                "A": "music.player.mode(mode = 单曲循环播放)"
+            },
+            {
+                "Q": "播放模式选择<随机播放>",
+                "A": "music.player.mode(mode = 随机播放)"
+            },
+            {
+                "Q": "设为<顺序播放>模式",
+                "A": "music.player.mode(mode = 顺序播放)"
+            },
+            {
+                "Q": "选择<列表循环播放>模式",
+                "A": "music.player.mode(mode = 列表循环播放)"
+            },
+            {
+                "Q": "设置成<单曲循环播放>",
+                "A": "music.player.mode(mode = 单曲循环播放)"
+            },
+            {
+                "Q": "改为<随机播放>模式",
+                "A": "music.player.mode(mode = 随机播放)"
+            },
+            {
+                "Q": "切换播放到<顺序播放>",
+                "A": "music.player.mode(mode = 顺序播放)"
+            },
+            {
+                "Q": "调整为<列表循环播放>模式",
+                "A": "music.player.mode(mode = 列表循环播放)"
+            }
+        ]
+    },
+    {
+        "name": "music.player.effect",
+        "description": "# 设置音乐音效\ndef music.player.effect(mode: string):\n# mode: 音效",
+        "qa": [
+            {
+                "Q": "开启<3D环绕>音效",
+                "A": "music.player.effect(mode = 3D环绕)"
+            },
+            {
+                "Q": "开启<低音增强>音效",
+                "A": "music.player.effect(mode = 低音增强)"
+            },
+            {
+                "Q": "切换到<立体声>模式",
+                "A": "music.player.effect(mode = 立体声)"
+            },
+            {
+                "Q": "将音效设置为<环绕声>",
+                "A": "music.player.effect(mode = 环绕声)"
+            },
+            {
+                "Q": "启用<高音增强>音效",
+                "A": "music.player.effect(mode = 高音增强)"
+            },
+            {
+                "Q": "切换到<3D环绕>模式",
+                "A": "music.player.effect(mode = 3D环绕)"
+            },
+            {
+                "Q": "激活<沉浸式>音效",
+                "A": "music.player.effect(mode = 沉浸式)"
+            },
+            {
+                "Q": "设置为<低音增强>模式",
+                "A": "music.player.effect(mode = 低音增强)"
+            },
+            {
+                "Q": "选择<影院模式>音效",
+                "A": "music.player.effect(mode = 影院模式)"
+            },
+            {
+                "Q": "开启<虚拟环绕>音效",
+                "A": "music.player.effect(mode = 虚拟环绕)"
+            },
+            {
+                "Q": "调整音效为<均衡器增强>",
+                "A": "music.player.effect(mode = 均衡器增强)"
+            },
+            {
+                "Q": "切换到<空间音效>模式",
+                "A": "music.player.effect(mode = 空间音效)"
+            },
+            {
+                "Q": "启用<声场扩展>音效",
+                "A": "music.player.effect(mode = 声场扩展)"
+            },
+            {
+                "Q": "开启<柔和模式>音效",
+                "A": "music.player.effect(mode = 柔和模式)"
+            },
+            {
+                "Q": "选择<重低音>模式",
+                "A": "music.player.effect(mode = 重低音)"
+            },
+            {
+                "Q": "设定为<清晰音效>",
+                "A": "music.player.effect(mode = 清晰音效)"
+            },
+            {
+                "Q": "开启<动态增强>音效",
+                "A": "music.player.effect(mode = 动态增强)"
+            },
+            {
+                "Q": "切换到<宽广声场>模式",
+                "A": "music.player.effect(mode = 宽广声场)"
+            },
+            {
+                "Q": "激活<影院级>音效",
+                "A": "music.player.effect(mode = 影院级)"
+            },
+            {
+                "Q": "设置成<3D音效>",
+                "A": "music.player.effect(mode = 3D音效)"
+            },
+            {
+                "Q": "选择<音乐会现场>模式",
+                "A": "music.player.effect(mode = 音乐会现场)"
+            }
+        ]
+    },
+    {
+        "name": "music.player.quality",
+        "description": "# 设置音乐音质\ndef music.player.quality(mode: string):\n# mode: 音质",
+        "qa": [
+            {
+                "Q": "开启<高保真>音质",
+                "A": "music.player.quality(mode = 高保真)"
+            },
+            {
+                "Q": "切换到<无损音质>模式",
+                "A": "music.player.quality(mode = 无损音质)"
+            },
+            {
+                "Q": "设置为<高保真>音质",
+                "A": "music.player.quality(mode = 高保真)"
+            },
+            {
+                "Q": "开启<高清音质>",
+                "A": "music.player.quality(mode = 高清音质)"
+            },
+            {
+                "Q": "将音质调整为<标准音质>",
+                "A": "music.player.quality(mode = 标准音质)"
+            },
+            {
+                "Q": "启用<超高清>音质",
+                "A": "music.player.quality(mode = 超高清)"
+            },
+            {
+                "Q": "切换到<CD品质>模式",
+                "A": "music.player.quality(mode = CD品质)"
+            },
+            {
+                "Q": "设定为<无损音质>",
+                "A": "music.player.quality(mode = 无损音质)"
+            },
+            {
+                "Q": "开启<流媒体最高>音质",
+                "A": "music.player.quality(mode = 流媒体最高)"
+            },
+            {
+                "Q": "调整音质为<极致音质>",
+                "A": "music.player.quality(mode = 极致音质)"
+            },
+            {
+                "Q": "选择<高保真>音效模式",
+                "A": "music.player.quality(mode = 高保真)"
+            },
+            {
+                "Q": "设置成<最佳音质>",
+                "A": "music.player.quality(mode = 最佳音质)"
+            },
+            {
+                "Q": "启用<优质音频>模式",
+                "A": "music.player.quality(mode = 优质音频)"
+            },
+            {
+                "Q": "切换到<高清无损>音质",
+                "A": "music.player.quality(mode = 高清无损)"
+            },
+            {
+                "Q": "激活<高保真>模式",
+                "A": "music.player.quality(mode = 高保真)"
+            },
+            {
+                "Q": "将播放音质设为<专业级>",
+                "A": "music.player.quality(mode = 专业级)"
+            },
+            {
+                "Q": "选择<极致音质>模式",
+                "A": "music.player.quality(mode = 极致音质)"
+            },
+            {
+                "Q": "调整为<流媒体最高音质>",
+                "A": "music.player.quality(mode = 流媒体最高)"
+            },
+            {
+                "Q": "开启<顶级音质>",
+                "A": "music.player.quality(mode = 顶级音质)"
+            },
+            {
+                "Q": "切换到<高解析度>音质",
+                "A": "music.player.quality(mode = 高解析度)"
+            },
+            {
+                "Q": "设定为<超清音质>",
+                "A": "music.player.quality(mode = 超清音质)"
+            }
+        ]
+    },
+    {
+        "name": "music.player.lyric",
+        "description": "# 查看歌词，看下歌词\ndef music.player.lyric(mode: boolean):\n# mode: 查看歌词开关，False为关闭/不查看，True为打开/查看",
+        "qa": [
+            {
+                "Q": "<打开>歌词显示",
+                "A": "music.player.lyric(mode = True)"
+            },
+            {
+                "Q": "显示歌词",
+                "A": "music.player.lyric(mode = True)"
+            },
+            {
+                "Q": "查看当前歌曲的歌词",
+                "A": "music.player.lyric(mode = True)"
+            },
+            {
+                "Q": "把歌词打开",
+                "A": "music.player.lyric(mode = True)"
+            },
+            {
+                "Q": "关闭歌词显示",
+                "A": "music.player.lyric(mode = False)"
+            },
+            {
+                "Q": "我想看歌词，打开一下",
+                "A": "music.player.lyric(mode = True)"
+            },
+            {
+                "Q": "隐藏歌词",
+                "A": "music.player.lyric(mode = False)"
+            },
+            {
+                "Q": "查看一下歌词内容",
+                "A": "music.player.lyric(mode = True)"
+            },
+            {
+                "Q": "开始显示歌词",
+                "A": "music.player.lyric(mode = True)"
+            },
+            {
+                "Q": "停止显示歌词",
+                "A": "music.player.lyric(mode = False)"
+            },
+            {
+                "Q": "歌词开关打开",
+                "A": "music.player.lyric(mode = True)"
+            },
+            {
+                "Q": "关闭歌词功能",
+                "A": "music.player.lyric(mode = False)"
+            },
+            {
+                "Q": "歌词显示开关",
+                "A": "music.player.lyric(mode = True)"
+            },
+            {
+                "Q": "启用歌词显示",
+                "A": "music.player.lyric(mode = True)"
+            },
+            {
+                "Q": "取消显示歌词",
+                "A": "music.player.lyric(mode = False)"
+            },
+            {
+                "Q": "打开歌词查看",
+                "A": "music.player.lyric(mode = True)"
+            },
+            {
+                "Q": "不看歌词了，关闭吧",
+                "A": "music.player.lyric(mode = False)"
+            },
+            {
+                "Q": "显示一下歌词",
+                "A": "music.player.lyric(mode = True)"
+            },
+            {
+                "Q": "切换到歌词模式",
+                "A": "music.player.lyric(mode = True)"
+            },
+            {
+                "Q": "隐藏当前的歌词",
+                "A": "music.player.lyric(mode = False)"
+            },
+            {
+                "Q": "激活歌词显示",
+                "A": "music.player.lyric(mode = True)"
+            }
+        ]
+    },
+    {
+        "name": "music.player.playlist",
+        "description": "# 打开关闭音乐播放列表\ndef music.player.playlist(mode: boolean):\n# mode: 查看音乐播放列表开关，False为关闭/不查看，True为打开/查看",
+        "qa": [
+            {
+                "Q": "<打开>播放列表",
+                "A": "music.player.playlist(mode = True)"
+            },
+            {
+                "Q": "查看当前播放列表",
+                "A": "music.player.playlist(mode = True)"
+            },
+            {
+                "Q": "打开音乐播放列表",
+                "A": "music.player.playlist(mode = True)"
+            },
+            {
+                "Q": "关闭播放列表",
+                "A": "music.player.playlist(mode = False)"
+            },
+            {
+                "Q": "显示当前的播放列表",
+                "A": "music.player.playlist(mode = True)"
+            },
+            {
+                "Q": "我想看看播放列表，打开一下",
+                "A": "music.player.playlist(mode = True)"
+            },
+            {
+                "Q": "隐藏播放列表",
+                "A": "music.player.playlist(mode = False)"
+            },
+            {
+                "Q": "打开一下现在播放的歌曲列表",
+                "A": "music.player.playlist(mode = True)"
+            },
+            {
+                "Q": "关闭歌曲列表显示",
+                "A": "music.player.playlist(mode = False)"
+            },
+            {
+                "Q": "查看一下当前有哪些歌曲在播放",
+                "A": "music.player.playlist(mode = True)"
+            },
+            {
+                "Q": "开启播放列表查看",
+                "A": "music.player.playlist(mode = True)"
+            },
+            {
+                "Q": "隐藏当前播放列表",
+                "A": "music.player.playlist(mode = False)"
+            },
+            {
+                "Q": "切换到播放列表视图",
+                "A": "music.player.playlist(mode = True)"
+            },
+            {
+                "Q": "取消播放列表显示",
+                "A": "music.player.playlist(mode = False)"
+            },
+            {
+                "Q": "显示播放列表",
+                "A": "music.player.playlist(mode = True)"
+            },
+            {
+                "Q": "关闭当前的播放列表",
+                "A": "music.player.playlist(mode = False)"
+            },
+            {
+                "Q": "播放列表开关打开",
+                "A": "music.player.playlist(mode = True)"
+            },
+            {
+                "Q": "停止显示播放列表",
+                "A": "music.player.playlist(mode = False)"
+            },
+            {
+                "Q": "查看正在播放的歌曲有哪些",
+                "A": "music.player.playlist(mode = True)"
+            },
+            {
+                "Q": "把播放列表关掉",
+                "A": "music.player.playlist(mode = False)"
+            },
+            {
+                "Q": "显示一下播放列表内容",
+                "A": "music.player.playlist(mode = True)"
+            }
+        ]
+    },
+    {
+        "name": "music.favorite",
+        "description": "# 收藏音乐歌曲歌单专辑\ndef music.favorite(collect: boolean):\n# collect: 收藏/取消，True为收藏歌曲歌单专辑，False为取消收藏歌曲歌单专辑",
+        "qa": [
+            {
+                "Q": "<收藏>歌曲",
+                "A": "music.favorite(collect = True)"
+            },
+            {
+                "Q": "收藏这首歌",
+                "A": "music.favorite(collect = True)"
+            },
+            {
+                "Q": "把这张专辑收藏起来",
+                "A": "music.favorite(collect = True)"
+            },
+            {
+                "Q": "收藏这个歌单",
+                "A": "music.favorite(collect = True)"
+            },
+            {
+                "Q": "添加这首歌到收藏",
+                "A": "music.favorite(collect = True)"
+            },
+            {
+                "Q": "取消收藏这张专辑",
+                "A": "music.favorite(collect = False)"
+            },
+            {
+                "Q": "把这首歌从收藏中移除",
+                "A": "music.favorite(collect = False)"
+            },
+            {
+                "Q": "收藏这张专辑",
+                "A": "music.favorite(collect = True)"
+            },
+            {
+                "Q": "取消收藏这个歌单",
+                "A": "music.favorite(collect = False)"
+            },
+            {
+                "Q": "把这个歌单收藏起来",
+                "A": "music.favorite(collect = True)"
+            },
+            {
+                "Q": "取消收藏这首歌",
+                "A": "music.favorite(collect = False)"
+            },
+            {
+                "Q": "添加到我的收藏",
+                "A": "music.favorite(collect = True)"
+            },
+            {
+                "Q": "移除这首歌的收藏",
+                "A": "music.favorite(collect = False)"
+            },
+            {
+                "Q": "把这首歌加入收藏",
+                "A": "music.favorite(collect = True)"
+            },
+            {
+                "Q": "取消收藏这张专辑",
+                "A": "music.favorite(collect = False)"
+            },
+            {
+                "Q": "收藏这个音乐",
+                "A": "music.favorite(collect = True)"
+            },
+            {
+                "Q": "取消收藏这个音乐",
+                "A": "music.favorite(collect = False)"
+            },
+            {
+                "Q": "把这个专辑加入收藏",
+                "A": "music.favorite(collect = True)"
+            },
+            {
+                "Q": "取消收藏这首音乐",
+                "A": "music.favorite(collect = False)"
+            },
+            {
+                "Q": "将这首歌从收藏中删除",
+                "A": "music.favorite(collect = False)"
+            },
+            {
+                "Q": "把这个歌单添加到收藏",
+                "A": "music.favorite(collect = True)"
+            }
+        ]
+    },
+    {
+        "name": "music.login",
+        "description": "# 登录选项\ndef music.login(mode: boolean):\n# mode: True为登录，False为退出登录",
+        "qa": [
+            {
+                "Q": "<登录>音乐软件",
+                "A": "music.login(mode = True)"
+            },
+            {
+                "Q": "登录到音乐软件",
+                "A": "music.login(mode = True)"
+            },
+            {
+                "Q": "退出当前账号",
+                "A": "music.login(mode = False)"
+            },
+            {
+                "Q": "登录我的音乐账户",
+                "A": "music.login(mode = True)"
+            },
+            {
+                "Q": "退出音乐账户",
+                "A": "music.login(mode = False)"
+            },
+            {
+                "Q": "登录到我的音乐账号",
+                "A": "music.login(mode = True)"
+            },
+            {
+                "Q": "注销当前登录",
+                "A": "music.login(mode = False)"
+            },
+            {
+                "Q": "进入音乐账户",
+                "A": "music.login(mode = True)"
+            },
+            {
+                "Q": "登出音乐软件",
+                "A": "music.login(mode = False)"
+            },
+            {
+                "Q": "登录到我的账户",
+                "A": "music.login(mode = True)"
+            },
+            {
+                "Q": "退出登录音乐账户",
+                "A": "music.login(mode = False)"
+            },
+            {
+                "Q": "登录音乐账号",
+                "A": "music.login(mode = True)"
+            },
+            {
+                "Q": "退出当前音乐软件",
+                "A": "music.login(mode = False)"
+            },
+            {
+                "Q": "登录我的账号",
+                "A": "music.login(mode = True)"
+            },
+            {
+                "Q": "注销音乐账户",
+                "A": "music.login(mode = False)"
+            },
+            {
+                "Q": "登录音乐平台",
+                "A": "music.login(mode = True)"
+            },
+            {
+                "Q": "退出我的账号",
+                "A": "music.login(mode = False)"
+            },
+            {
+                "Q": "重新登录音乐软件",
+                "A": "music.login(mode = True)"
+            },
+            {
+                "Q": "退出当前音乐账号",
+                "A": "music.login(mode = False)"
+            },
+            {
+                "Q": "登录到音乐平台",
+                "A": "music.login(mode = True)"
+            },
+            {
+                "Q": "退出我的音乐账户",
+                "A": "music.login(mode = False)"
+            }
+        ]
+    },
+    {
+        "name": "music.recent.open",
+        "description": "# 播放最近播放的歌曲，播放最近听的音乐歌曲\ndef music.recent.open():",
+        "qa": [
+            {
+                "Q": "播放最近听的歌曲",
+                "A": "music.login(mode = False)"
+            },
+            {
+                "Q": "播放我最近听过的歌",
+                "A": "music.login(mode = False)"
+            },
+            {
+                "Q": "来一首我最近播放过的歌曲",
+                "A": "music.login(mode = False)"
+            },
+            {
+                "Q": "放一放最近听过的音乐",
+                "A": "music.login(mode = False)"
+            },
+            {
+                "Q": "播放最近的音乐",
+                "A": "music.login(mode = False)"
+            },
+            {
+                "Q": "重播最近播放的歌曲",
+                "A": "music.login(mode = False)"
+            },
+            {
+                "Q": "播放我刚听的那首歌",
+                "A": "music.login(mode = False)"
+            },
+            {
+                "Q": "放一下我最近听的歌",
+                "A": "music.login(mode = False)"
+            },
+            {
+                "Q": "重播最近听过的音乐",
+                "A": "music.login(mode = False)"
+            },
+            {
+                "Q": "播放最近听过的曲目",
+                "A": "music.login(mode = False)"
+            },
+            {
+                "Q": "重播我刚才听的歌",
+                "A": "music.login(mode = False)"
+            }
+        ]
+    },
+    {
+        "name": "music.favorite.open",
+        "description": "# 播放我喜欢的音乐歌曲\ndef music.favorite.open(song: string, musician: string, list: string, play: boolean):\n# song: 歌曲名\n# musician: 歌手\n# list: 歌单\n# play: True为播放，False为打开列表",
+        "qa": [
+            {
+                "Q": "打开我收藏的歌单<杰伦经典>",
+                "A": "music.favorite.open(list = 杰伦经典, play = False)"
+            },
+            {
+                "Q": "打开我最喜欢的歌单<日本流行>",
+                "A": "music.favorite.open(list = 日本流行, play = False)"
+            },
+            {
+                "Q": "帮我打开收藏的音乐",
+                "A": "music.favorite.open(play = False)"
+            },
+            {
+                "Q": "打开并查看我收藏的歌单<经典老歌>",
+                "A": "music.favorite.open(list = 经典老歌, play = False)"
+            },
+            {
+                "Q": "先打开我收藏的<周杰伦经典歌曲>",
+                "A": "music.favorite.open(musician = 周杰伦, play = False)"
+            },
+            {
+                "Q": "查看我收藏的歌曲列表",
+                "A": "music.favorite.open(play = False)"
+            },
+            {
+                "Q": "只打开我喜欢的歌单<华语热歌>",
+                "A": "music.favorite.open(list = 华语热歌, play = False)"
+            },
+            {
+                "Q": "帮我打开<邓紫棋>的收藏歌单",
+                "A": "music.favorite.open(musician = 邓紫棋, play = False)"
+            },
+            {
+                "Q": "打开我收藏的<五月天>",
+                "A": "music.favorite.open(musician = 五月天, play = False)"
+            },
+            {
+                "Q": "只打开我喜欢的<欧美流行>歌单",
+                "A": "music.favorite.open(list = 欧美流行, play = False)"
+            },
+            {
+                "Q": "查看我收藏的<经典电影原声>",
+                "A": "music.favorite.open(album = 经典电影原声, play = False)"
+            },
+            {
+                "Q": "帮我打开收藏的<周杰伦>",
+                "A": "music.favorite.open(musician = 周杰伦, play = False)"
+            },
+            {
+                "Q": "打开我珍藏的<怀旧金曲>歌单",
+                "A": "music.favorite.open(list = 怀旧金曲, play = False)"
+            },
+            {
+                "Q": "查看我收藏的<校园民谣>",
+                "A": "music.favorite.open(album = 校园民谣, play = False)"
+            },
+            {
+                "Q": "打开并查看我收藏的那个歌单<流行金曲>",
+                "A": "music.favorite.open(list = 流行金曲, play = False)"
+            },
+            {
+                "Q": "来一首我经常听的收藏歌曲",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "播放我收藏的音乐，随便一首都可以",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "打开我的收藏，随便播放一首",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "听一听我收藏的歌单里的歌",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "随便播放一首我收藏的经典曲目",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "播放我收藏的歌曲，不要跳过",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "打开我收藏的音乐，随机播放",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "来一首我最爱的歌单里的歌曲",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "随便放一首我喜欢的音乐",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "播放我珍藏的那些老歌",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "来一首我喜欢的歌单里的歌",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "播放我收藏的那些老歌",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "随机播放我收藏的任何一首歌",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "听听我最爱的歌单里的歌曲",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "播放我保存的那些音乐",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "播放我喜欢的那些歌",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "播放我收藏列表中的音乐",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "随便放一首我珍藏的音乐",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "播放我收藏的歌曲，不要打断",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "播放我平时最常听的那几首歌",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "播放我的私人歌单里的音乐",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "放一下我常收藏的那些经典歌曲",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "打开并播放我收藏的那个歌单",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "播放我常听的那首歌",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "放一下我最喜欢的那几首歌",
+                "A": "music.favorite.open(play = True)"
+            },
+            {
+                "Q": "播放我收藏的<周杰伦>中的经典歌曲",
+                "A": "music.favorite.open(musician = 周杰伦, play = True)"
+            },
+            {
+                "Q": "来一首我收藏的<王菲>的歌",
+                "A": "music.favorite.open(musician = 王菲, play = True)"
+            },
+            {
+                "Q": "播放我收藏的<五月天>的热门歌曲",
+                "A": "music.favorite.open(musician = 五月天, play = True)"
+            },
+            {
+                "Q": "放一下<陈奕迅>的歌单，我收藏的",
+                "A": "music.favorite.open(musician = 陈奕迅, play = True)"
+            },
+            {
+                "Q": "播放我收藏的<林俊杰>里的歌",
+                "A": "music.favorite.open(musician = 林俊杰, play = True)"
+            },
+            {
+                "Q": "来一首我喜欢的<邓紫棋>的歌",
+                "A": "music.favorite.open(musician = 邓紫棋, play = True)"
+            },
+            {
+                "Q": "播放我收藏的<李荣浩>歌单",
+                "A": "music.favorite.open(musician = 李荣浩, play = True)"
+            },
+            {
+                "Q": "放一下我收藏的<周杰伦>",
+                "A": "music.favorite.open(musician = 周杰伦, play = True)"
+            },
+            {
+                "Q": "来一首我收藏的<孙燕姿>经典老歌",
+                "A": "music.favorite.open(musician = 孙燕姿, play = True)"
+            },
+            {
+                "Q": "播放我收藏的<张学友>的情歌",
+                "A": "music.favorite.open(musician = 张学友, play = True)"
+            },
+            {
+                "Q": "打开并播放我收藏的<经典老歌>歌单",
+                "A": "music.favorite.open(list = 经典老歌, play = True)"
+            },
+            {
+                "Q": "来一首我收藏的<港台金曲>",
+                "A": "music.favorite.open(list = 港台金曲, play = True)"
+            },
+            {
+                "Q": "播放我收藏的<流行金曲>歌单",
+                "A": "music.favorite.open(list = 流行金曲, play = True)"
+            },
+            {
+                "Q": "放一下<许嵩>的歌，我收藏的",
+                "A": "music.favorite.open(musician = 许嵩, play = True)"
+            },
+            {
+                "Q": "来一首我收藏的<欧美经典>歌曲",
+                "A": "music.favorite.open(list = 欧美经典, play = True)"
+            },
+            {
+                "Q": "播放我收藏的<华语热歌>歌单",
+                "A": "music.favorite.open(list = 华语热歌, play = True)"
+            },
+            {
+                "Q": "随便放一首我收藏的<周杰伦>的歌",
+                "A": "music.favorite.open(musician = 周杰伦, play = True)"
+            },
+            {
+                "Q": "播放我收藏的<经典老歌>",
+                "A": "music.favorite.open(album = 经典老歌, play = True)"
+            },
+            {
+                "Q": "来一首我喜欢的<林忆莲>的歌",
+                "A": "music.favorite.open(musician = 林忆莲, play = True)"
+            },
+            {
+                "Q": "播放我收藏的<流行音乐>歌单",
+                "A": "music.favorite.open(list = 流行音乐, play = True)"
+            },
+            {
+                "Q": "放一下我珍藏的<怀旧金曲>",
+                "A": "music.favorite.open(album = 怀旧金曲, play = True)"
+            },
+            {
+                "Q": "打开并播放<邓丽君>的经典歌曲，我收藏的",
+                "A": "music.favorite.open(musician = 邓丽君, play = True)"
+            },
+            {
+                "Q": "来一首我收藏的<抖音热歌>",
+                "A": "music.favorite.open(list = 抖音热歌, play = True)"
+            },
+            {
+                "Q": "播放我收藏的<KTV必唱>歌单",
+                "A": "music.favorite.open(list = KTV必唱, play = True)"
+            },
+            {
+                "Q": "放一下<李宗盛>的歌，我收藏的",
+                "A": "music.favorite.open(musician = 李宗盛, play = True)"
+            },
+            {
+                "Q": "来一首我喜欢的<古风歌曲>",
+                "A": "music.favorite.open(list = 古风歌曲, play = True)"
+            },
+            {
+                "Q": "播放我收藏的<经典电影原声>",
+                "A": "music.favorite.open(album = 经典电影原声, play = True)"
+            },
+            {
+                "Q": "放一下<薛之谦>的歌单，我收藏的",
+                "A": "music.favorite.open(musician = 薛之谦, play = True)"
+            },
+            {
+                "Q": "播放我收藏的<欧美流行>歌单",
+                "A": "music.favorite.open(list = 欧美流行, play = True)"
+            },
+            {
+                "Q": "来一首我珍藏的<校园民谣>",
+                "A": "music.favorite.open(album = 校园民谣, play = True)"
+            },
+            {
+                "Q": "帮我播放<周杰伦>收藏的《晴天》",
+                "A": "music.favorite.open(musician = 周杰伦, song = 晴天, play = True)"
+            },
+            {
+                "Q": "听一下我收藏的<王菲>的《红豆》吧",
+                "A": "music.favorite.open(musician = 王菲, song = 红豆, play = True)"
+            },
+            {
+                "Q": "能不能放一首我收藏的<林俊杰>的《江南》？",
+                "A": "music.favorite.open(musician = 林俊杰, song = 江南, play = True)"
+            },
+            {
+                "Q": "来首我收藏的<陈奕迅>的《十年》",
+                "A": "music.favorite.open(musician = 陈奕迅, song = 十年, play = True)"
+            },
+            {
+                "Q": "播放一下我收藏的<邓紫棋>的《光年之外》",
+                "A": "music.favorite.open(musician = 邓紫棋, song = 光年之外, play = True)"
+            },
+            {
+                "Q": "我想听我收藏的<张学友>的《吻别》",
+                "A": "music.favorite.open(musician = 张学友, song = 吻别, play = True)"
+            },
+            {
+                "Q": "播放我收藏的<李荣浩>的《模特》，谢谢",
+                "A": "music.favorite.open(musician = 李荣浩, song = 模特, play = True)"
+            },
+            {
+                "Q": "我收藏的<孙燕姿>的《遇见》在哪里？",
+                "A": "music.favorite.open(musician = 孙燕姿, song = 遇见, play = True)"
+            },
+            {
+                "Q": "放一首我收藏的<五月天>的《突然好想你》",
+                "A": "music.favorite.open(musician = 五月天, song = 突然好想你, play = True)"
+            },
+            {
+                "Q": "来一首我喜欢的<蔡依林>的《舞娘》吧",
+                "A": "music.favorite.open(musician = 蔡依林, song = 舞娘, play = True)"
+            },
+            {
+                "Q": "能播放我收藏的<许嵩>的《断桥残雪》吗？",
+                "A": "music.favorite.open(musician = 许嵩, song = 断桥残雪, play = True)"
+            },
+            {
+                "Q": "播放一下我珍藏的<薛之谦>的《演员》",
+                "A": "music.favorite.open(musician = 薛之谦, song = 演员, play = True)"
+            },
+            {
+                "Q": "把我喜欢的<李宗盛>的《凡人歌》放出来",
+                "A": "music.favorite.open(musician = 李宗盛, song = 凡人歌, play = True)"
+            },
+            {
+                "Q": "我想听<邓丽君>的《甜蜜蜜》，我收藏的版本",
+                "A": "music.favorite.open(musician = 邓丽君, song = 甜蜜蜜, play = True)"
+            },
+            {
+                "Q": "把我收藏的<林忆莲>的《至少还有你》放出来",
+                "A": "music.favorite.open(musician = 林忆莲, song = 至少还有你, play = True)"
+            },
+            {
+                "Q": "给我放一首我收藏的<赵雷>的《成都》",
+                "A": "music.favorite.open(musician = 赵雷, song = 成都, play = True)"
+            },
+            {
+                "Q": "来首我珍藏的<张靓颖>的《如果爱下去》",
+                "A": "music.favorite.open(musician = 张靓颖, song = 如果爱下去, play = True)"
+            },
+            {
+                "Q": "我想听听我收藏的<汪峰>的《存在》",
+                "A": "music.favorite.open(musician = 汪峰, song = 存在, play = True)"
+            },
+            {
+                "Q": "帮我播放<朴树>的《那些花儿》，我收藏的那首",
+                "A": "music.favorite.open(musician = 朴树, song = 那些花儿, play = True)"
+            },
+            {
+                "Q": "有没有我收藏的<刘德华>的《忘情水》？放一下",
+                "A": "music.favorite.open(musician = 刘德华, song = 忘情水, play = True)"
+            },
+            {
+                "Q": "让我听听我收藏的<陈慧琳>的《记事本》",
+                "A": "music.favorite.open(musician = 陈慧琳, song = 记事本, play = True)"
+            },
+            {
+                "Q": "能不能放一首我珍藏的<黄龄>的《痒》？",
+                "A": "music.favorite.open(musician = 黄龄, song = 痒, play = True)"
+            },
+            {
+                "Q": "把我收藏的<梁静茹>的《勇气》播放出来",
+                "A": "music.favorite.open(musician = 梁静茹, song = 勇气, play = True)"
+            },
+            {
+                "Q": "放一下我喜欢的<古巨基>的《情歌王》",
+                "A": "music.favorite.open(musician = 古巨基, song = 情歌王, play = True)"
+            },
+            {
+                "Q": "播放我保存的<那英>的《白天不懂夜的黑》",
+                "A": "music.favorite.open(musician = 那英, song = 白天不懂夜的黑, play = True)"
+            },
+            {
+                "Q": "能找到我收藏的<李健>的《贝加尔湖畔》吗？放一下",
+                "A": "music.favorite.open(musician = 李健, song = 贝加尔湖畔, play = True)"
+            },
+            {
+                "Q": "来一首我珍藏的<张韶涵>的《隐形的翅膀》吧",
+                "A": "music.favorite.open(musician = 张韶涵, song = 隐形的翅膀, play = True)"
+            },
+            {
+                "Q": "播放我最喜欢的<陈小春>的《独家记忆》",
+                "A": "music.favorite.open(musician = 陈小春, song = 独家记忆, play = True)"
+            },
+            {
+                "Q": "帮我找找我收藏的<范玮琪>的《最初的梦想》",
+                "A": "music.favorite.open(musician = 范玮琪, song = 最初的梦想, play = True)"
+            },
+            {
+                "Q": "播放我收藏的<林志炫>的《单身情歌》，好吗？",
+                "A": "music.favorite.open(musician = 林志炫, song = 单身情歌, play = True)"
+            }
+        ]
+    }
+]
