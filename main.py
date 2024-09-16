@@ -9,6 +9,9 @@ from sklearn.model_selection import train_test_split
 from collections import defaultdict
 import torch.nn.functional as F
 from transformers import AutoTokenizer, AutoModel
+from sklearn.manifold import TSNE
+import matplotlib.pyplot as plt
+import os
 
 # 添加结束标记的函数
 def add_eos(input_examples, eos_token):
@@ -108,13 +111,10 @@ def split_by_name(qa_pairs, questions, embeddings, test_size=0.2):
     print(f"Split data into {len(qa_pairs_train)} training pairs and {len(qa_pairs_test)} test pairs.")
     return qa_pairs_train, qa_pairs_test, questions_train, questions_test, embeddings_train, embeddings_test
 
-def evaluate_model(qa_pairs, questions, embeddings, model, test_size=0.2, k=3):
+def evaluate_model(qa_pairs_train, qa_pairs_test, questions_test, embeddings_train, embeddings_test, index, k=3):
     """评估模型的准确率和精确率，精确率不区分去重场景"""
-    print(f"Evaluating model with test size {test_size} and top-k {k}...")
+    print(f"Evaluating model with top-k {k}...")
 
-    qa_pairs_train, qa_pairs_test, questions_train, questions_test, embeddings_train, embeddings_test, index = prepare_data_and_faiss_index(
-        qa_pairs, questions, embeddings, test_size=test_size)
-    
     correct_retrieved_no_dedup = defaultdict(int)
     correct_retrieved_dedup = defaultdict(int)
     precision_per_query = [] if k > 1 else None  # 如果 k = 1，精确率不需要计算
@@ -178,6 +178,38 @@ def save_results_to_json(results, json_file):
     with open(safe_filename, 'w', encoding='utf-8') as file:
         json.dump(results, file, ensure_ascii=False, indent=4)
     print("Results saved.")
+
+def plot_and_save_tsne(embeddings, labels, model_name, test_size, k, save_path="t-sne"):
+    # 将 embeddings 转换为 NumPy 数组
+    embeddings = np.array(embeddings)
+    
+    # t-SNE 降维
+    tsne = TSNE(n_components=2, random_state=42)
+    tsne_embeddings = tsne.fit_transform(embeddings)
+    
+    # 不同 name 的标签颜色
+    unique_labels = list(set(labels))
+    colors = plt.get_cmap('tab20', len(unique_labels))
+    label_color_map = {label: colors(i) for i, label in enumerate(unique_labels)}
+    
+    # 创建图像
+    plt.figure(figsize=(10, 7))
+    for i, label in enumerate(unique_labels):
+        indices = [j for j, l in enumerate(labels) if l == label]
+        plt.scatter(tsne_embeddings[indices, 0], tsne_embeddings[indices, 1], 
+                    label=label, color=label_color_map[label], alpha=0.7)
+
+    plt.title(f"t-SNE plot for {model_name}, test_size={test_size}, k={k}")
+    plt.legend(loc='best')
+    
+    # 创建保存路径
+    model_save_path = os.path.join(save_path, model_name.replace("/", "_"))
+    os.makedirs(model_save_path, exist_ok=True)
+    
+    # 保存图像
+    file_name = f"tsne_test_size_{test_size}_k_{k}.png"
+    plt.savefig(os.path.join(model_save_path, file_name))
+    plt.close()
 
 # nvidia/NV-Embed-v2
 class ModelHandlerV1:
@@ -280,10 +312,13 @@ def main(model_name, ks=[3], test_sizes=[0.2]):
 
     for test_size in test_sizes:
         print(f"Evaluating for test_size={test_size}...")
+        qa_pairs_train, qa_pairs_test, questions_train, questions_test, embeddings_train, embeddings_test, index = prepare_data_and_faiss_index(
+            qa_pairs, questions, embeddings, test_size)
+
         for k in ks:
             print(f"Evaluating for k={k}...")
             overall_accuracy_no_dedup, overall_accuracy_dedup, overall_precision, accuracy_no_dedup_per_name, accuracy_dedup_per_name, precision_per_name = evaluate_model(
-                qa_pairs, questions, embeddings, model_handler, test_size, k)
+                qa_pairs_train, qa_pairs_test, questions_test, embeddings_train, embeddings_test, index, k)
             
             print(f"Results for test_size={test_size}, k={k}:")
             print(f"  Overall accuracy_no_dedup: {overall_accuracy_no_dedup:.4f}")
@@ -306,6 +341,9 @@ def main(model_name, ks=[3], test_sizes=[0.2]):
                 "accuracy_dedup_per_name": accuracy_dedup_per_name,
                 "precision_per_name": precision_per_name
             }
+
+            # 生成 t-SNE 图
+            plot_and_save_tsne(embeddings_train, [qa['name'] for qa in qa_pairs_train], model_name, test_size, k)
 
     save_results_to_json(all_results, f"{model_name}_evaluation_results.json")
 
