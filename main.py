@@ -179,7 +179,7 @@ def save_results_to_json(results, json_file):
         json.dump(results, file, ensure_ascii=False, indent=4)
     print("Results saved.")
 
-def plot_and_save_tsne(embeddings, labels, model_name, test_size, k, save_path="t-sne"):
+def plot_and_save_tsne(embeddings, labels, model_name, test_size, save_path="t-sne"):
     # 将 embeddings 转换为 NumPy 数组
     embeddings = np.array(embeddings)
     
@@ -199,7 +199,7 @@ def plot_and_save_tsne(embeddings, labels, model_name, test_size, k, save_path="
         plt.scatter(tsne_embeddings[indices, 0], tsne_embeddings[indices, 1], 
                     label=label, color=label_color_map[label], alpha=0.7)
 
-    plt.title(f"t-SNE plot for {model_name}, test_size={test_size}, k={k}")
+    plt.title(f"t-SNE plot for {model_name}, test_size={test_size}")
     plt.legend(loc='best')
     
     # 创建保存路径
@@ -207,7 +207,7 @@ def plot_and_save_tsne(embeddings, labels, model_name, test_size, k, save_path="
     os.makedirs(model_save_path, exist_ok=True)
     
     # 保存图像
-    file_name = f"tsne_test_size_{test_size}_k_{k}.png"
+    file_name = f"tsne_test_size_{test_size}.png"
     plt.savefig(os.path.join(model_save_path, file_name))
     plt.close()
 
@@ -342,8 +342,8 @@ def main(model_name, ks=[3], test_sizes=[0.2]):
                 "precision_per_name": precision_per_name
             }
 
-            # 生成 t-SNE 图
-            plot_and_save_tsne(embeddings_train, [qa['name'] for qa in qa_pairs_train], model_name, test_size, k)
+        # 生成 t-SNE 图
+        plot_and_save_tsne(embeddings_train, [qa['name'] for qa in qa_pairs_train], model_name, test_size)
 
     save_results_to_json(all_results, f"{model_name}_evaluation_results.json")
 
