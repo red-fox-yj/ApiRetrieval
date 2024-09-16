@@ -1,6 +1,7 @@
+# nvidia/NV-Embed-v2
 torch==2.2.0
 transformers==4.42.4
 sentence-transformers==2.7.0
-flash-attn==2.2.0
 einops
 datasets
+ijson
