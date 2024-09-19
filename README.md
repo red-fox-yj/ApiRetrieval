@@ -34,8 +34,7 @@ A800 80G
 
 注：上述两个表仅排列方式不同，数据完全相同。
 
-![tsne_test_size_0 5](https://github.com/user-attachments/assets/f2dccd9e-886e-4279-86f2-10ebac6dabfc)
-
+![tsne_test_size_0 25](https://github.com/user-attachments/assets/11b3fc6f-9642-47cb-9603-c276f93e2a0a)
 
 ## BAAI/bge-en-icl
 A800 80G
@@ -66,7 +65,7 @@ A800 80G
 
 注：上述两个表仅排列方式不同，数据完全相同。
 
-![tsne_test_size_0 5](https://github.com/user-attachments/assets/840f3ad5-614c-4901-a436-c903251087ca)
+![tsne_test_size_0 25](https://github.com/user-attachments/assets/1713ad8e-f3b0-4a73-affc-2ffa444c938f)
 
 ## dunzhang/stella_en_1.5B_v5
 RTX4090 24G
@@ -97,4 +96,5 @@ RTX4090 24G
 
 注：上述两个表仅排列方式不同，数据完全相同。
 
-![tsne_test_size_0 5](https://github.com/user-attachments/assets/9ed50168-c62b-450b-b220-5f7ca7d5ed89)
+![tsne_test_size_0 25](https://github.com/user-attachments/assets/ab3918db-da48-43e4-b1bf-b71ad5fc4967)
+
