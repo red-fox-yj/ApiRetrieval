@@ -1,0 +1,1732 @@
+[
+    {
+        "name": "video.search",
+        "description": "# 搜索视频\ndef video.search(video: string, starring: string, domain: string, free: boolean, up: string):\n# video: 视频名\n# starring: 主演\n# domain: 垂域，类型\n# free: 是否免费\n# up: up主",
+        "qa": [
+            {
+                "Q": "有没有<周星驰>主演的《功夫》可以播放？",
+                "A": "video.search(video = 功夫, starring = 周星驰)"
+            },
+            {
+                "Q": "我要看<张国荣>主演的《霸王别姬》",
+                "A": "video.search(video = 霸王别姬, starring = 张国荣)"
+            },
+            {
+                "Q": "推荐一部<成龙>主演的经典电影，最好免费<free>",
+                "A": "video.search(starring = 成龙, free = True)"
+            },
+            {
+                "Q": "帮我找一找<刘德华>主演的动作片",
+                "A": "video.search(starring = 刘德华, domain = 动作片)"
+            },
+            {
+                "Q": "想看<李连杰>主演的武侠片，有什么推荐？",
+                "A": "video.search(starring = 李连杰, domain = 武侠片)"
+            },
+            {
+                "Q": "播放<舒淇>主演的浪漫电影",
+                "A": "video.search(starring = 舒淇, domain = 浪漫电影)"
+            },
+            {
+                "Q": "能不能找一下<梁朝伟>主演的电影？",
+                "A": "video.search(starring = 梁朝伟)"
+            },
+            {
+                "Q": "有没有<章子怡>主演的电影可以看？",
+                "A": "video.search(starring = 章子怡)"
+            },
+            {
+                "Q": "播放<黄渤>主演的喜剧电影",
+                "A": "video.search(starring = 黄渤, domain = 喜剧电影)"
+            },
+            {
+                "Q": "推荐一部<赵薇>主演的电影",
+                "A": "video.search(starring = 赵薇)"
+            },
+            {
+                "Q": "我想看<周润发>主演的《赌神》",
+                "A": "video.search(video = 赌神, starring = 周润发)"
+            },
+            {
+                "Q": "来一部<刘青云>主演的犯罪片吧",
+                "A": "video.search(starring = 刘青云, domain = 犯罪片)"
+            },
+            {
+                "Q": "有没有<古天乐>主演的科幻片可以看？",
+                "A": "video.search(starring = 古天乐, domain = 科幻片)"
+            },
+            {
+                "Q": "帮我找<王祖贤>主演的恐怖片",
+                "A": "video.search(starring = 王祖贤, domain = 恐怖片)"
+            },
+            {
+                "Q": "我想看<吴京>主演的动作电影",
+                "A": "video.search(starring = 吴京, domain = 动作电影)"
+            },
+            {
+                "Q": "我想看免费的<free>科幻电影，有什么推荐？",
+                "A": "video.search(domain = 科幻电影, free = True)"
+            },
+            {
+                "Q": "有没有好看的动作片可以看？",
+                "A": "video.search(domain = 动作片)"
+            },
+            {
+                "Q": "推荐一部免费的<free>喜剧电影",
+                "A": "video.search(domain = 喜剧电影, free = True)"
+            },
+            {
+                "Q": "我想找一部经典的浪漫电影",
+                "A": "video.search(domain = 浪漫电影)"
+            },
+            {
+                "Q": "播放一部恐怖片，最好是免费的<free>",
+                "A": "video.search(domain = 恐怖片, free = True)"
+            },
+            {
+                "Q": "有没有可以看的悬疑片推荐？",
+                "A": "video.search(domain = 悬疑片)"
+            },
+            {
+                "Q": "想看一部战争片，有没有免费的<free>？",
+                "A": "video.search(domain = 战争片, free = True)"
+            },
+            {
+                "Q": "有没有好看的奇幻电影？",
+                "A": "video.search(domain = 奇幻电影)"
+            },
+            {
+                "Q": "推荐一部适合全家看的动画片",
+                "A": "video.search(domain = 动画片)"
+            },
+            {
+                "Q": "播放一部免费的<free>纪录片",
+                "A": "video.search(domain = 纪录片, free = True)"
+            },
+            {
+                "Q": "我想看历史题材的电影，有推荐吗？",
+                "A": "video.search(domain = 历史片)"
+            },
+            {
+                "Q": "有没有好看的传记片可以播放？",
+                "A": "video.search(domain = 传记片)"
+            },
+            {
+                "Q": "播放一部免费的<free>冒险电影",
+                "A": "video.search(domain = 冒险电影, free = True)"
+            },
+            {
+                "Q": "想看一部音乐题材的电影，有什么好推荐？",
+                "A": "video.search(domain = 音乐电影)"
+            },
+            {
+                "Q": "推荐一部免费的<free>灾难片",
+                "A": "video.search(domain = 灾难片, free = True)"
+            },
+            {
+                "Q": "有没有免费<free>的好电影推荐？",
+                "A": "video.search(free = True)"
+            },
+            {
+                "Q": "帮我找找免费的<free>经典电影",
+                "A": "video.search(domain = 经典电影, free = True)"
+            },
+            {
+                "Q": "播放一部免费的<free>新片，有什么推荐？",
+                "A": "video.search(domain = 新电影, free = True)"
+            },
+            {
+                "Q": "我想看免费的<free>动作电影",
+                "A": "video.search(domain = 动作电影, free = True)"
+            },
+            {
+                "Q": "推荐一部免费的<free>喜剧片",
+                "A": "video.search(domain = 喜剧电影, free = True)"
+            },
+            {
+                "Q": "有没有免费<free>的爱情电影？",
+                "A": "video.search(domain = 爱情电影, free = True)"
+            },
+            {
+                "Q": "播放一部免费的<free>恐怖片",
+                "A": "video.search(domain = 恐怖片, free = True)"
+            },
+            {
+                "Q": "能找到免费的<free>动画片吗？",
+                "A": "video.search(domain = 动画片, free = True)"
+            },
+            {
+                "Q": "来一部免费的<free>战争片",
+                "A": "video.search(domain = 战争片, free = True)"
+            },
+            {
+                "Q": "有没有免费<free>的悬疑片推荐？",
+                "A": "video.search(domain = 悬疑片, free = True)"
+            },
+            {
+                "Q": "播放一部免费的<free>传记片",
+                "A": "video.search(domain = 传记片, free = True)"
+            },
+            {
+                "Q": "推荐一部免费的<free>历史片",
+                "A": "video.search(domain = 历史片, free = True)"
+            },
+            {
+                "Q": "我想看免费的<free>科幻电影",
+                "A": "video.search(domain = 科幻电影, free = True)"
+            },
+            {
+                "Q": "有没有免费<free>的奇幻片可以看？",
+                "A": "video.search(domain = 奇幻电影, free = True)"
+            },
+            {
+                "Q": "播放一部免费的<free>纪录片",
+                "A": "video.search(domain = 纪录片, free = True)"
+            },
+            {
+                "Q": "有没有<小片片说大片>的视频可以播放？",
+                "A": "video.search(up = 小片片说大片)"
+            },
+            {
+                "Q": "帮我找找<哔哩哔哩电影>最近发布的视频",
+                "A": "video.search(up = 哔哩哔哩电影)"
+            },
+            {
+                "Q": "我想看<小紧张的虫虫>剪辑的经典电影片段",
+                "A": "video.search(up = 小紧张的虫虫)"
+            },
+            {
+                "Q": "播放<波士顿圆脸>的最新电影解说视频",
+                "A": "video.search(up = 波士顿圆脸)"
+            },
+            {
+                "Q": "有没有<血狼破军>推荐的恐怖片？",
+                "A": "video.search(up = 血狼破军, domain = 恐怖片)"
+            },
+            {
+                "Q": "帮我找找<小傲想睡觉>上传的搞笑电影",
+                "A": "video.search(up = 小傲想睡觉, domain = 搞笑电影)"
+            },
+            {
+                "Q": "我想看<老坛胡说>推荐的纪录片",
+                "A": "video.search(up = 老坛胡说, domain = 纪录片)"
+            },
+            {
+                "Q": "播放<影视飓风>点评过的动作片",
+                "A": "video.search(up = 影视飓风, domain = 动作片)"
+            },
+            {
+                "Q": "推荐一下<逗比的雀巢>讲解的电影片段",
+                "A": "video.search(up = 逗比的雀巢)"
+            },
+            {
+                "Q": "有没有<胖龙的小生活>剪辑的浪漫电影片段？",
+                "A": "video.search(up = 胖龙的小生活, domain = 浪漫电影)"
+            },
+            {
+                "Q": "播放<盗月社食遇记>制作的悬疑片解说视频",
+                "A": "video.search(up = 盗月社食遇记, domain = 悬疑片)"
+            },
+            {
+                "Q": "帮我找<木鱼水心>的电影推荐合集",
+                "A": "video.search(up = 木鱼水心)"
+            },
+            {
+                "Q": "有没有<记录生活的蛋黄派>发布的免费电影资源<free>？",
+                "A": "video.search(up = 记录生活的蛋黄派, free = True)"
+            },
+            {
+                "Q": "播放<三十六贱笑>讲述的传记片解说",
+                "A": "video.search(up = 三十六贱笑, domain = 传记片)"
+            },
+            {
+                "Q": "我想看<HOLA小测佬>的最新电影解说",
+                "A": "video.search(up = HOLA小测佬)"
+            },
+            {
+                "Q": "帮我找一部<莱昂纳多·迪卡普里奥>主演的电影，比如《盗梦空间》",
+                "A": "video.search(starring = 莱昂纳多·迪卡普里奥, video = 盗梦空间)"
+            },
+            {
+                "Q": "有没有<斯嘉丽·约翰逊>主演的科幻片《黑寡妇》可以看？",
+                "A": "video.search(starring = 斯嘉丽·约翰逊, video = 黑寡妇, domain = 科幻片)"
+            },
+            {
+                "Q": "想看<汤姆·克鲁斯>的动作片，有什么推荐？",
+                "A": "video.search(starring = 汤姆·克鲁斯, domain = 动作片)"
+            },
+            {
+                "Q": "播放<罗伯特·唐尼>主演的《钢铁侠》吧",
+                "A": "video.search(starring = 罗伯特·唐尼, video = 钢铁侠)"
+            },
+            {
+                "Q": "我想看<娜塔莉·波特曼>主演的《黑天鹅》",
+                "A": "video.search(starring = 娜塔莉·波特曼, video = 黑天鹅)"
+            },
+            {
+                "Q": "有没有<基努·里维斯>主演的《黑客帝国》？",
+                "A": "video.search(starring = 基努·里维斯, video = 黑客帝国)"
+            },
+            {
+                "Q": "播放一部<朱莉娅·罗伯茨>主演的浪漫电影",
+                "A": "video.search(starring = 朱莉娅·罗伯茨, domain = 浪漫电影)"
+            },
+            {
+                "Q": "找一部<布拉德·皮特>主演的战争片《狂怒》",
+                "A": "video.search(starring = 布拉德·皮特, video = 狂怒, domain = 战争片)"
+            },
+            {
+                "Q": "有没有<玛丽莲·梦露>主演的经典电影可以看？",
+                "A": "video.search(starring = 玛丽莲·梦露, domain = 经典电影)"
+            },
+            {
+                "Q": "播放<摩根·弗里曼>主演的《肖申克的救赎》",
+                "A": "video.search(starring = 摩根·弗里曼, video = 肖申克的救赎)"
+            },
+            {
+                "Q": "我想看<艾玛·沃特森>主演的《美女与野兽》",
+                "A": "video.search(starring = 艾玛·沃特森, video = 美女与野兽)"
+            },
+            {
+                "Q": "来一部<詹妮弗·劳伦斯>主演的动作片《饥饿游戏》",
+                "A": "video.search(starring = 詹妮弗·劳伦斯, video = 饥饿游戏, domain = 动作片)"
+            },
+            {
+                "Q": "有没有<马特·达蒙>主演的科幻电影《火星救援》？",
+                "A": "video.search(starring = 马特·达蒙, video = 火星救援, domain = 科幻片)"
+            },
+            {
+                "Q": "推荐一部<梅丽尔·斯特里普>主演的传记片",
+                "A": "video.search(starring = 梅丽尔·斯特里普, domain = 传记片)"
+            },
+            {
+                "Q": "播放<丹尼尔·克雷格>主演的《007》系列电影",
+                "A": "video.search(starring = 丹尼尔·克雷格, video = 007系列)"
+            },
+            {
+                "Q": "我想看《霸王别姬》这部电影",
+                "A": "video.search(video = 霸王别姬)"
+            },
+            {
+                "Q": "播放《功夫》这部电影",
+                "A": "video.search(video = 功夫)"
+            },
+            {
+                "Q": "帮我找《红海行动》，想再看一遍",
+                "A": "video.search(video = 红海行动)"
+            },
+            {
+                "Q": "有没有《让子弹飞》这部电影可以看？",
+                "A": "video.search(video = 让子弹飞)"
+            },
+            {
+                "Q": "我想看《喜剧之王》，能找到吗？",
+                "A": "video.search(video = 喜剧之王)"
+            },
+            {
+                "Q": "播放《美人鱼》这部电影",
+                "A": "video.search(video = 美人鱼)"
+            },
+            {
+                "Q": "有没有《无间道》可以播放？",
+                "A": "video.search(video = 无间道)"
+            },
+            {
+                "Q": "我想看《战狼2》，能播放吗？",
+                "A": "video.search(video = 战狼2)"
+            },
+            {
+                "Q": "帮我找找《人在囧途》这部电影",
+                "A": "video.search(video = 人在囧途)"
+            },
+            {
+                "Q": "播放《大话西游》这部经典电影",
+                "A": "video.search(video = 大话西游, domain = 经典电影)"
+            },
+            {
+                "Q": "我想再看一遍《少林足球》，有资源吗？",
+                "A": "video.search(video = 少林足球)"
+            },
+            {
+                "Q": "有没有《卧虎藏龙》可以播放？",
+                "A": "video.search(video = 卧虎藏龙)"
+            },
+            {
+                "Q": "帮我找到《铁达尼号》这部电影",
+                "A": "video.search(video = 铁达尼号)"
+            },
+            {
+                "Q": "播放《英雄》这部电影",
+                "A": "video.search(video = 英雄)"
+            },
+            {
+                "Q": "我想看《天下无贼》，能找到吗？",
+                "A": "video.search(video = 天下无贼)"
+            },
+            {
+                "Q": "今天下雨天，有没有适合看的温暖电影？",
+                "A": "video.search(domain = 温暖电影)"
+            },
+            {
+                "Q": "推荐一部适合情侣看的浪漫电影",
+                "A": "video.search(domain = 浪漫电影)"
+            },
+            {
+                "Q": "有没有适合家庭聚会看的电影？",
+                "A": "video.search(domain = 家庭电影)"
+            },
+            {
+                "Q": "想要一部让人振奋的电影，有推荐吗？",
+                "A": "video.search(domain = 励志电影)"
+            },
+            {
+                "Q": "有什么电影适合安静的夜晚独自观看？",
+                "A": "video.search(domain = 温馨电影)"
+            },
+            {
+                "Q": "推荐一部适合周末轻松看的喜剧片",
+                "A": "video.search(domain = 喜剧片)"
+            },
+            {
+                "Q": "有没有适合和朋友一起看的冒险电影？",
+                "A": "video.search(domain = 冒险电影)"
+            },
+            {
+                "Q": "想看一部心情不好时可以看的励志电影",
+                "A": "video.search(domain = 励志电影)"
+            },
+            {
+                "Q": "有没有适合长途旅行看的电影？",
+                "A": "video.search(domain = 长途旅行看的电影)"
+            },
+            {
+                "Q": "帮我找一部适合户外露营时看的电影",
+                "A": "video.search(domain = 户外露营看的电影)"
+            },
+            {
+                "Q": "推荐一部适合冬天看的电影",
+                "A": "video.search(domain = 冬日电影)"
+            },
+            {
+                "Q": "有没有适合夏日午后观看的清新电影？",
+                "A": "video.search(domain = 清新电影)"
+            },
+            {
+                "Q": "想看一部激动人心的动作片，推荐一下吧",
+                "A": "video.search(domain = 动作片)"
+            },
+            {
+                "Q": "有什么电影适合失眠的夜晚看？",
+                "A": "video.search(domain = 助眠电影)"
+            },
+            {
+                "Q": "推荐一部适合全家一起看的电影",
+                "A": "video.search(domain = 家庭电影)"
+            },
+            {
+                "Q": "有没有免费的<free>好莱坞科幻片推荐？",
+                "A": "video.search(domain = 好莱坞科幻片, free = True)"
+            },
+            {
+                "Q": "我想看一部经典的法国爱情电影，有什么推荐？",
+                "A": "video.search(domain = 法国爱情电影)"
+            },
+            {
+                "Q": "播放一部英国悬疑片，比如《福尔摩斯》",
+                "A": "video.search(video = 福尔摩斯, domain = 英国悬疑片)"
+            },
+            {
+                "Q": "有没有意大利黑帮电影可以播放？",
+                "A": "video.search(domain = 意大利黑帮电影)"
+            },
+            {
+                "Q": "推荐一部日本动画电影，比如《千与千寻》",
+                "A": "video.search(video = 千与千寻, domain = 日本动画电影)"
+            },
+            {
+                "Q": "我想找一部西班牙惊悚片，有什么建议吗？",
+                "A": "video.search(domain = 西班牙惊悚片)"
+            },
+            {
+                "Q": "播放一部印度宝莱坞音乐剧吧",
+                "A": "video.search(domain = 印度宝莱坞音乐剧)"
+            },
+            {
+                "Q": "有没有德国的历史电影可以看？",
+                "A": "video.search(domain = 德国历史电影)"
+            },
+            {
+                "Q": "推荐一部韩国动作片，比如《釜山行》",
+                "A": "video.search(video = 釜山行, domain = 韩国动作片)"
+            },
+            {
+                "Q": "播放一部澳大利亚冒险电影",
+                "A": "video.search(domain = 澳大利亚冒险电影)"
+            },
+            {
+                "Q": "有没有加拿大的独立电影可以推荐？",
+                "A": "video.search(domain = 加拿大独立电影)"
+            },
+            {
+                "Q": "来一部俄罗斯战争片，比如《斯大林格勒》",
+                "A": "video.search(video = 斯大林格勒, domain = 俄罗斯战争片)"
+            },
+            {
+                "Q": "播放一部巴西的犯罪电影《上帝之城》",
+                "A": "video.search(video = 上帝之城, domain = 巴西犯罪电影)"
+            },
+            {
+                "Q": "我想看一部中国武侠电影，有什么推荐？",
+                "A": "video.search(domain = 中国武侠电影)"
+            },
+            {
+                "Q": "有没有阿根廷的浪漫电影可以播放？",
+                "A": "video.search(domain = 阿根廷浪漫电影)"
+            },
+            {
+                "Q": "推荐一部适合和朋友一起看的美国大片",
+                "A": "video.search(domain = 美国大片)"
+            },
+            {
+                "Q": "下雨天，适合看的法国浪漫电影有什么推荐？",
+                "A": "video.search(domain = 法国浪漫电影)"
+            },
+            {
+                "Q": "想要振奋精神，来一部好莱坞动作片",
+                "A": "video.search(domain = 好莱坞动作片)"
+            },
+            {
+                "Q": "适合家庭观影的动画电影，有什么推荐？",
+                "A": "video.search(domain = 家庭动画电影)"
+            },
+            {
+                "Q": "来一部适合独自观看的悬疑片",
+                "A": "video.search(domain = 独自观看的悬疑片)"
+            },
+            {
+                "Q": "我想看一部适合情侣共度的爱情电影",
+                "A": "video.search(domain = 情侣爱情电影)"
+            },
+            {
+                "Q": "有没有适合睡前看的日本动画电影？",
+                "A": "video.search(domain = 睡前日本动画电影)"
+            },
+            {
+                "Q": "想看一部轻松搞笑的法国喜剧",
+                "A": "video.search(domain = 法国喜剧)"
+            },
+            {
+                "Q": "播放一部适合周末放松的浪漫电影",
+                "A": "video.search(domain = 周末浪漫电影)"
+            },
+            {
+                "Q": "推荐一部适合派对气氛的音乐电影",
+                "A": "video.search(domain = 派对音乐电影)"
+            },
+            {
+                "Q": "有没有适合运动后观看的励志片？",
+                "A": "video.search(domain = 运动后励志电影)"
+            },
+            {
+                "Q": "来一部适合长途飞行看的电影",
+                "A": "video.search(domain = 长途飞行看的电影)"
+            },
+            {
+                "Q": "播放一部适合冥想时观看的纪录片",
+                "A": "video.search(domain = 冥想看的纪录片)"
+            },
+            {
+                "Q": "推荐一部适合冬天晚上看的温暖电影",
+                "A": "video.search(domain = 冬天晚上看的温暖电影)"
+            },
+            {
+                "Q": "想要一个安静的夜晚，来一部治愈电影吧",
+                "A": "video.search(domain = 治愈电影)"
+            },
+            {
+                "Q": "播放<Mediastorm>发布的《中国卫星发射与宇宙探秘》视频",
+                "A": "video.search(video = 中国卫星发射与宇宙探秘, up = Mediastorm)"
+            },
+            {
+                "Q": "帮我找找<Professor Song Hao>讲解的《高等数学趣味讲座》",
+                "A": "video.search(video = 高等数学趣味讲座, up = Professor Song Hao)"
+            },
+            {
+                "Q": "我想看<MrMideng>的《家装材料选择指南》视频",
+                "A": "video.search(video = 家装材料选择指南, up = MrMideng)"
+            },
+            {
+                "Q": "播放<机智的党妹>最新的《神秘盲盒大揭秘》",
+                "A": "video.search(video = 神秘盲盒大揭秘, up = 机智的党妹)"
+            },
+            {
+                "Q": "有没有<老番茄>上传的《我的世界搞笑实况》？",
+                "A": "video.search(video = 我的世界搞笑实况, up = 老番茄)"
+            },
+            {
+                "Q": "帮我找找<黑桐谷歌>发布的《鬼畜全明星》合集",
+                "A": "video.search(video = 鬼畜全明星, up = 黑桐谷歌)"
+            },
+            {
+                "Q": "我想看<敬汉卿>最新发布的《疯狂科学实验》视频",
+                "A": "video.search(video = 疯狂科学实验, up = 敬汉卿)"
+            },
+            {
+                "Q": "播放<花少北>的《游戏史上的十大经典时刻》",
+                "A": "video.search(video = 游戏史上的十大经典时刻, up = 花少北)"
+            },
+            {
+                "Q": "推荐一下<老师好我叫何同学>的《最新科技产品测评》",
+                "A": "video.search(video = 最新科技产品测评, up = 老师好我叫何同学)"
+            },
+            {
+                "Q": "有没有<翔翔大作战>制作的《搞笑挑战合集》视频？",
+                "A": "video.search(video = 搞笑挑战合集, up = 翔翔大作战)"
+            },
+            {
+                "Q": "播放<无忧菌>发布的《日常生活小窍门》合集",
+                "A": "video.search(video = 日常生活小窍门, up = 无忧菌)"
+            },
+            {
+                "Q": "帮我找找<鹿人AAA>解说的《军事题材视频解析》",
+                "A": "video.search(video = 军事题材视频解析, up = 鹿人AAA)"
+            },
+            {
+                "Q": "播放<乃一捂啊>上传的《娱乐圈八卦揭秘》视频",
+                "A": "video.search(video = 娱乐圈八卦揭秘, up = 乃一捂啊)"
+            },
+            {
+                "Q": "我想看<胖龙的小生活>制作的《日常生活搞笑片段》",
+                "A": "video.search(video = 日常生活搞笑片段, up = 胖龙的小生活)"
+            },
+            {
+                "Q": "播放<小片片说大片>推荐的《年度最佳电影盘点》视频",
+                "A": "video.search(video = 年度最佳电影盘点, up = 小片片说大片)"
+            }
+        ]
+    },
+    {
+        "name": "video.player.play",
+        "description": "# 视频播放控制\ndef video.player.play(mode: boolean):\n# mode: 暂停/继续播放，False为暂停，True为播放",
+        "qa": [
+            {
+                "Q": "暂停播放视频",
+                "A": "video.player.play(mode = False)"
+            },
+            {
+                "Q": "暂停当前视频",
+                "A": "video.player.play(mode = False)"
+            },
+            {
+                "Q": "播放当前暂停的视频",
+                "A": "video.player.play(mode = True)"
+            },
+            {
+                "Q": "暂停播放视频",
+                "A": "video.player.play(mode = False)"
+            },
+            {
+                "Q": "继续播放刚才暂停的视频",
+                "A": "video.player.play(mode = True)"
+            },
+            {
+                "Q": "暂停一下这个视频",
+                "A": "video.player.play(mode = False)"
+            },
+            {
+                "Q": "恢复播放视频",
+                "A": "video.player.play(mode = True)"
+            },
+            {
+                "Q": "播放暂停的视频",
+                "A": "video.player.play(mode = True)"
+            },
+            {
+                "Q": "暂时停止播放",
+                "A": "video.player.play(mode = False)"
+            },
+            {
+                "Q": "继续播放这个视频",
+                "A": "video.player.play(mode = True)"
+            },
+            {
+                "Q": "暂停现在播放的内容",
+                "A": "video.player.play(mode = False)"
+            },
+            {
+                "Q": "继续播放当前视频",
+                "A": "video.player.play(mode = True)"
+            },
+            {
+                "Q": "暂停播放当前视频",
+                "A": "video.player.play(mode = False)"
+            },
+            {
+                "Q": "恢复播放刚才的视频",
+                "A": "video.player.play(mode = True)"
+            },
+            {
+                "Q": "播放刚刚暂停的内容",
+                "A": "video.player.play(mode = True)"
+            }
+        ]
+    },
+    {
+        "name": "video.player.switch",
+        "description": "# 切换播放视频\ndef video.player.switch(mode: integer):\n# mode: 1为下一个，-1为上一个",
+        "qa": [
+            {
+                "Q": "切回上一个视频",
+                "A": "video.player.switch(mode = -1)"
+            },
+            {
+                "Q": "切换到下一个视频吧",
+                "A": "video.player.switch(mode = 1)"
+            },
+            {
+                "Q": "播放之前的那个视频",
+                "A": "video.player.switch(mode = -1)"
+            },
+            {
+                "Q": "跳到下一个片段",
+                "A": "video.player.switch(mode = 1)"
+            },
+            {
+                "Q": "返回上一段视频",
+                "A": "video.player.switch(mode = -1)"
+            },
+            {
+                "Q": "换到前一个视频",
+                "A": "video.player.switch(mode = -1)"
+            },
+            {
+                "Q": "播放下一个内容",
+                "A": "video.player.switch(mode = 1)"
+            },
+            {
+                "Q": "切到上一个视频看看",
+                "A": "video.player.switch(mode = -1)"
+            },
+            {
+                "Q": "切回前一段视频",
+                "A": "video.player.switch(mode = -1)"
+            },
+            {
+                "Q": "继续下一个视频",
+                "A": "video.player.switch(mode = 1)"
+            },
+            {
+                "Q": "回到刚才播放的内容",
+                "A": "video.player.switch(mode = -1)"
+            },
+            {
+                "Q": "跳转到下一个视频",
+                "A": "video.player.switch(mode = 1)"
+            },
+            {
+                "Q": "重播上一段视频",
+                "A": "video.player.switch(mode = -1)"
+            },
+            {
+                "Q": "播放上一个视频看看",
+                "A": "video.player.switch(mode = -1)"
+            },
+            {
+                "Q": "跳转到前一个视频",
+                "A": "video.player.switch(mode = -1)"
+            },
+            {
+                "Q": "换个视频播放，看看下一个",
+                "A": "video.player.switch(mode = 1)"
+            },
+            {
+                "Q": "切到前一个视频",
+                "A": "video.player.switch(mode = -1)"
+            },
+            {
+                "Q": "切换到后一个视频",
+                "A": "video.player.switch(mode = 1)"
+            },
+            {
+                "Q": "看下一个视频内容",
+                "A": "video.player.switch(mode = 1)"
+            }
+        ]
+    },
+    {
+        "name": "video.player.skip",
+        "description": "# 视频播放进度快进/快退，跳到某一时刻\ndef video.player.skip(time: int):\n# time: 时间，正数为快进，负数快退，以秒为单位",
+        "qa": [
+            {
+                "Q": "视频快进30秒",
+                "A": "video.player.skip(time = 30)"
+            },
+            {
+                "Q": "快退15秒到刚才的位置",
+                "A": "video.player.skip(time = -15)"
+            },
+            {
+                "Q": "往前跳60秒",
+                "A": "video.player.skip(time = 60)"
+            },
+            {
+                "Q": "后退10秒再看一遍",
+                "A": "video.player.skip(time = -10)"
+            },
+            {
+                "Q": "快进45秒继续播放",
+                "A": "video.player.skip(time = 45)"
+            },
+            {
+                "Q": "倒退20秒看看之前的片段",
+                "A": "video.player.skip(time = -20)"
+            },
+            {
+                "Q": "跳到视频的下一分钟",
+                "A": "video.player.skip(time = 60)"
+            },
+            {
+                "Q": "退回30秒重新观看",
+                "A": "video.player.skip(time = -30)"
+            },
+            {
+                "Q": "把视频快进30秒",
+                "A": "video.player.skip(time = 30)"
+            },
+            {
+                "Q": "后退5秒",
+                "A": "video.player.skip(time = -5)"
+            },
+            {
+                "Q": "快进到下一个关键点",
+                "A": "video.player.skip(time = 30)"
+            },
+            {
+                "Q": "往前快退20秒",
+                "A": "video.player.skip(time = -20)"
+            },
+            {
+                "Q": "跳到60秒后的位置",
+                "A": "video.player.skip(time = 60)"
+            },
+            {
+                "Q": "跳回10秒再看一遍",
+                "A": "video.player.skip(time = -10)"
+            },
+            {
+                "Q": "往前跳15秒",
+                "A": "video.player.skip(time = 15)"
+            }
+        ]
+    },
+    {
+        "name": "video.player.danmaku.switch",
+        "description": "# 打开/关闭弹幕\ndef video.player.danmaku.switch(mode: boolean):\n# mode: 弹幕开关",
+        "qa": [
+            {
+                "Q": "打开弹幕",
+                "A": "video.player.danmaku.switch(mode = True)"
+            },
+            {
+                "Q": "关闭弹幕",
+                "A": "video.player.danmaku.switch(mode = False)"
+            },
+            {
+                "Q": "开启弹幕显示",
+                "A": "video.player.danmaku.switch(mode = True)"
+            },
+            {
+                "Q": "关掉弹幕",
+                "A": "video.player.danmaku.switch(mode = False)"
+            },
+            {
+                "Q": "显示弹幕内容",
+                "A": "video.player.danmaku.switch(mode = True)"
+            },
+            {
+                "Q": "隐藏弹幕",
+                "A": "video.player.danmaku.switch(mode = False)"
+            },
+            {
+                "Q": "打开视频弹幕",
+                "A": "video.player.danmaku.switch(mode = True)"
+            },
+            {
+                "Q": "停止显示弹幕",
+                "A": "video.player.danmaku.switch(mode = False)"
+            },
+            {
+                "Q": "切换到弹幕模式",
+                "A": "video.player.danmaku.switch(mode = True)"
+            },
+            {
+                "Q": "关闭屏幕上的弹幕",
+                "A": "video.player.danmaku.switch(mode = False)"
+            },
+            {
+                "Q": "显示屏幕上的弹幕",
+                "A": "video.player.danmaku.switch(mode = True)"
+            },
+            {
+                "Q": "开始弹幕模式",
+                "A": "video.player.danmaku.switch(mode = True)"
+            },
+            {
+                "Q": "退出弹幕模式",
+                "A": "video.player.danmaku.switch(mode = False)"
+            },
+            {
+                "Q": "开启视频弹幕",
+                "A": "video.player.danmaku.switch(mode = True)"
+            },
+            {
+                "Q": "隐藏视频弹幕",
+                "A": "video.player.danmaku.switch(mode = False)"
+            }
+        ]
+    },
+    {
+        "name": "video.player.chapter",
+        "description": "# 设置选集\ndef video.player.chapter(number: string):\n# number: 集数",
+        "qa": [
+            {
+                "Q": "设置视频到第一集",
+                "A": "video.player.chapter(number = 第一集)"
+            },
+            {
+                "Q": "播放视频的第十集",
+                "A": "video.player.chapter(number = 第十集)"
+            },
+            {
+                "Q": "切换到第三集",
+                "A": "video.player.chapter(number = 第三集)"
+            },
+            {
+                "Q": "播放第二集",
+                "A": "video.player.chapter(number = 第二集)"
+            },
+            {
+                "Q": "选择播放第五集",
+                "A": "video.player.chapter(number = 第五集)"
+            },
+            {
+                "Q": "设置为第六集",
+                "A": "video.player.chapter(number = 第六集)"
+            },
+            {
+                "Q": "播放视频的最新一集",
+                "A": "video.player.chapter(number = 最新一集)"
+            },
+            {
+                "Q": "切换到最后一集",
+                "A": "video.player.chapter(number = 最后一集)"
+            },
+            {
+                "Q": "播放第一集内容",
+                "A": "video.player.chapter(number = 第一集)"
+            },
+            {
+                "Q": "跳转到第四集",
+                "A": "video.player.chapter(number = 第四集)"
+            },
+            {
+                "Q": "切换到第八集",
+                "A": "video.player.chapter(number = 第八集)"
+            },
+            {
+                "Q": "选择第七集播放",
+                "A": "video.player.chapter(number = 第七集)"
+            }
+        ]
+    },
+    {
+        "name": "video.player.quality",
+        "description": "# 设置视频播放画质\ndef video.player.quality(mode: string):\n# mode: 画质",
+        "qa": [
+            {
+                "Q": "画质设置为1080P 超清",
+                "A": "video.player.quality(mode = 1080P 超清)"
+            },
+            {
+                "Q": "切换到720P 高清画质",
+                "A": "video.player.quality(mode = 720P 高清)"
+            },
+            {
+                "Q": "将视频画质调整到480P 标清",
+                "A": "video.player.quality(mode = 480P 标清)"
+            },
+            {
+                "Q": "使用360P 流畅模式播放",
+                "A": "video.player.quality(mode = 360P 流畅)"
+            },
+            {
+                "Q": "播放时设置为1080P 超清",
+                "A": "video.player.quality(mode = 1080P 超清)"
+            },
+            {
+                "Q": "视频质量改为720P 高清",
+                "A": "video.player.quality(mode = 720P 高清)"
+            },
+            {
+                "Q": "画质调低到480P 标清",
+                "A": "video.player.quality(mode = 480P 标清)"
+            },
+            {
+                "Q": "将视频画质切换到360P",
+                "A": "video.player.quality(mode = 360P 流畅)"
+            },
+            {
+                "Q": "播放时启用1080P 超清画质",
+                "A": "video.player.quality(mode = 1080P 超清)"
+            },
+            {
+                "Q": "将播放画质调整为720P 高清",
+                "A": "video.player.quality(mode = 720P 高清)"
+            },
+            {
+                "Q": "切换到480P 标清模式播放",
+                "A": "video.player.quality(mode = 480P 标清)"
+            },
+            {
+                "Q": "降低画质为360P 流畅",
+                "A": "video.player.quality(mode = 360P 流畅)"
+            },
+            {
+                "Q": "将视频画质设为1080P 超清",
+                "A": "video.player.quality(mode = 1080P 超清)"
+            },
+            {
+                "Q": "画质调整到720P 高清播放",
+                "A": "video.player.quality(mode = 720P 高清)"
+            },
+            {
+                "Q": "设置画质为480P 标清模式",
+                "A": "video.player.quality(mode = 480P 标清)"
+            },
+            {
+                "Q": "调整画质到360P 流畅播放",
+                "A": "video.player.quality(mode = 360P 流畅)"
+            },
+            {
+                "Q": "切换到1080P 超清观看",
+                "A": "video.player.quality(mode = 1080P 超清)"
+            },
+            {
+                "Q": "更改播放画质为720P 高清",
+                "A": "video.player.quality(mode = 720P 高清)"
+            },
+            {
+                "Q": "选择480P 标清进行播放",
+                "A": "video.player.quality(mode = 480P 标清)"
+            },
+            {
+                "Q": "将视频调整到360P 流畅",
+                "A": "video.player.quality(mode = 360P 流畅)"
+            }
+        ]
+    },
+    {
+        "name": "video.player.speed",
+        "description": "# 设置视频播放速度\ndef video.player.speed(mode: float):\n# mode: 倍速",
+        "qa": [
+            {
+                "Q": "设置1.25倍速播放视频",
+                "A": "video.player.speed(mode = 1.25)"
+            },
+            {
+                "Q": "播放视频时调到2倍速",
+                "A": "video.player.speed(mode = 2)"
+            },
+            {
+                "Q": "将播放速度调整到1.5倍速",
+                "A": "video.player.speed(mode = 1.5)"
+            },
+            {
+                "Q": "视频设置为正常速度播放",
+                "A": "video.player.speed(mode = 1)"
+            },
+            {
+                "Q": "将视频倍速调到0.75",
+                "A": "video.player.speed(mode = 0.75)"
+            },
+            {
+                "Q": "播放视频时使用0.5倍速",
+                "A": "video.player.speed(mode = 0.5)"
+            },
+            {
+                "Q": "把视频的速度改为2倍速",
+                "A": "video.player.speed(mode = 2)"
+            },
+            {
+                "Q": "视频播放速度调整为1.25倍速",
+                "A": "video.player.speed(mode = 1.25)"
+            },
+            {
+                "Q": "选择1.5倍速进行播放",
+                "A": "video.player.speed(mode = 1.5)"
+            },
+            {
+                "Q": "调整视频播放到正常速度",
+                "A": "video.player.speed(mode = 1)"
+            },
+            {
+                "Q": "设置播放速度为0.75倍",
+                "A": "video.player.speed(mode = 0.75)"
+            },
+            {
+                "Q": "将视频调到0.5倍速播放",
+                "A": "video.player.speed(mode = 0.5)"
+            },
+            {
+                "Q": "播放时启用2倍速模式",
+                "A": "video.player.speed(mode = 2)"
+            },
+            {
+                "Q": "切换到1.5倍速播放视频",
+                "A": "video.player.speed(mode = 1.5)"
+            },
+            {
+                "Q": "将视频速度改为1.25倍",
+                "A": "video.player.speed(mode = 1.25)"
+            },
+            {
+                "Q": "播放速度调整为0.75倍",
+                "A": "video.player.speed(mode = 0.75)"
+            },
+            {
+                "Q": "设置播放速度为0.5倍",
+                "A": "video.player.speed(mode = 0.5)"
+            },
+            {
+                "Q": "将视频播放倍速设为2倍",
+                "A": "video.player.speed(mode = 2)"
+            },
+            {
+                "Q": "启用1.25倍速播放视频",
+                "A": "video.player.speed(mode = 1.25)"
+            },
+            {
+                "Q": "调整视频速度到1倍速",
+                "A": "video.player.speed(mode = 1)"
+            }
+        ]
+    },
+    {
+        "name": "video.player.audio",
+        "description": "# 切换到仅声音模式\ndef video.player.audio(mode: boolean):\n# mode: True为打开声音模式，False为退出声音模式回到正常模式",
+        "qa": [
+            {
+                "Q": "打开仅声音模式播放",
+                "A": "video.player.audio(mode = True)"
+            },
+            {
+                "Q": "切换到仅声音模式",
+                "A": "video.player.audio(mode = True)"
+            },
+            {
+                "Q": "进入只听声音的播放模式",
+                "A": "video.player.audio(mode = True)"
+            },
+            {
+                "Q": "关闭仅声音模式",
+                "A": "video.player.audio(mode = False)"
+            },
+            {
+                "Q": "回到正常模式播放",
+                "A": "video.player.audio(mode = False)"
+            },
+            {
+                "Q": "启用音频播放模式",
+                "A": "video.player.audio(mode = True)"
+            },
+            {
+                "Q": "退出声音模式回到视频播放",
+                "A": "video.player.audio(mode = False)"
+            },
+            {
+                "Q": "切换为声音播放",
+                "A": "video.player.audio(mode = True)"
+            },
+            {
+                "Q": "退出仅声音模式",
+                "A": "video.player.audio(mode = False)"
+            },
+            {
+                "Q": "播放时只保留声音",
+                "A": "video.player.audio(mode = True)"
+            },
+            {
+                "Q": "开启声音播放模式",
+                "A": "video.player.audio(mode = True)"
+            },
+            {
+                "Q": "切换到音频模式",
+                "A": "video.player.audio(mode = True)"
+            },
+            {
+                "Q": "退出音频模式恢复视频",
+                "A": "video.player.audio(mode = False)"
+            },
+            {
+                "Q": "播放时启用音频模式",
+                "A": "video.player.audio(mode = True)"
+            },
+            {
+                "Q": "关闭音频模式播放视频",
+                "A": "video.player.audio(mode = False)"
+            },
+            {
+                "Q": "切换为仅声音播放",
+                "A": "video.player.audio(mode = True)"
+            }
+        ]
+    },
+    {
+        "name": "video.player.like",
+        "description": "# 点赞视频\ndef video.player.like(mode: boolean):\n# mode: True为点赞，False为取消点赞",
+        "qa": [
+            {
+                "Q": "给这个视频点赞",
+                "A": "video.player.like(mode = True)"
+            },
+            {
+                "Q": "点赞这个视频",
+                "A": "video.player.like(mode = True)"
+            },
+            {
+                "Q": "取消对这个视频的点赞",
+                "A": "video.player.like(mode = False)"
+            },
+            {
+                "Q": "给视频点个赞",
+                "A": "video.player.like(mode = True)"
+            },
+            {
+                "Q": "取消点赞这个视频",
+                "A": "video.player.like(mode = False)"
+            },
+            {
+                "Q": "给这个视频点个赞",
+                "A": "video.player.like(mode = True)"
+            },
+            {
+                "Q": "撤回对这个视频的点赞",
+                "A": "video.player.like(mode = False)"
+            },
+            {
+                "Q": "对视频点赞",
+                "A": "video.player.like(mode = True)"
+            },
+            {
+                "Q": "取消点赞",
+                "A": "video.player.like(mode = False)"
+            },
+            {
+                "Q": "为该视频点赞",
+                "A": "video.player.like(mode = True)"
+            },
+            {
+                "Q": "取消对该视频的赞",
+                "A": "video.player.like(mode = False)"
+            },
+            {
+                "Q": "点个赞支持这个视频",
+                "A": "video.player.like(mode = True)"
+            },
+            {
+                "Q": "撤销点赞",
+                "A": "video.player.like(mode = False)"
+            },
+            {
+                "Q": "点赞当前视频",
+                "A": "video.player.like(mode = True)"
+            },
+            {
+                "Q": "对当前视频取消点赞",
+                "A": "video.player.like(mode = False)"
+            },
+            {
+                "Q": "给视频点个支持",
+                "A": "video.player.like(mode = True)"
+            },
+            {
+                "Q": "移除对视频的点赞",
+                "A": "video.player.like(mode = False)"
+            },
+            {
+                "Q": "为当前视频点赞",
+                "A": "video.player.like(mode = True)"
+            },
+            {
+                "Q": "取消对当前视频的点赞",
+                "A": "video.player.like(mode = False)"
+            }
+        ]
+    },
+    {
+        "name": "video.player.follow",
+        "description": "# 关注UP主\ndef video.player.follow(mode: boolean):\n# mode: True为关注，False为取消关注",
+        "qa": [
+            {
+                "Q": "关注这个up主",
+                "A": "video.player.follow(mode = True)"
+            },
+            {
+                "Q": "取消关注这个up主",
+                "A": "video.player.follow(mode = False)"
+            },
+            {
+                "Q": "给这个up主点个关注",
+                "A": "video.player.follow(mode = True)"
+            },
+            {
+                "Q": "取消对这个up主的关注",
+                "A": "video.player.follow(mode = False)"
+            },
+            {
+                "Q": "开始关注这个up主",
+                "A": "video.player.follow(mode = True)"
+            },
+            {
+                "Q": "停止关注这个up主",
+                "A": "video.player.follow(mode = False)"
+            },
+            {
+                "Q": "关注这个up主的账号",
+                "A": "video.player.follow(mode = True)"
+            },
+            {
+                "Q": "取关这个up主",
+                "A": "video.player.follow(mode = False)"
+            },
+            {
+                "Q": "关注该up主",
+                "A": "video.player.follow(mode = True)"
+            },
+            {
+                "Q": "取消对该up主的关注",
+                "A": "video.player.follow(mode = False)"
+            },
+            {
+                "Q": "点个关注支持这个up主",
+                "A": "video.player.follow(mode = True)"
+            },
+            {
+                "Q": "移除对这个up主的关注",
+                "A": "video.player.follow(mode = False)"
+            },
+            {
+                "Q": "关注一下这个up主",
+                "A": "video.player.follow(mode = True)"
+            },
+            {
+                "Q": "取消该up主的关注",
+                "A": "video.player.follow(mode = False)"
+            },
+            {
+                "Q": "添加这个up主到我的关注",
+                "A": "video.player.follow(mode = True)"
+            },
+            {
+                "Q": "从关注列表中移除该up主",
+                "A": "video.player.follow(mode = False)"
+            },
+            {
+                "Q": "追踪这个up主",
+                "A": "video.player.follow(mode = True)"
+            },
+            {
+                "Q": "取消关注该up主",
+                "A": "video.player.follow(mode = False)"
+            }
+        ]
+    },
+    {
+        "name": "video.player.favorite",
+        "description": "# 收藏视频;收藏\ndef video.player.favorite(collect: boolean):\n# collect: 收藏/取消，True为收藏视频，False为取消收藏",
+        "qa": [
+            {
+                "Q": "收藏这个视频",
+                "A": "video.player.favorite(collect = True)"
+            },
+            {
+                "Q": "取消收藏这个视频",
+                "A": "video.player.favorite(collect = False)"
+            },
+            {
+                "Q": "将视频添加到我的收藏",
+                "A": "video.player.favorite(collect = True)"
+            },
+            {
+                "Q": "从收藏列表中移除这个视频",
+                "A": "video.player.favorite(collect = False)"
+            },
+            {
+                "Q": "收藏这部剧",
+                "A": "video.player.favorite(collect = True)"
+            },
+            {
+                "Q": "取消收藏这部剧",
+                "A": "video.player.favorite(collect = False)"
+            },
+            {
+                "Q": "把这个视频收藏起来",
+                "A": "video.player.favorite(collect = True)"
+            },
+            {
+                "Q": "取消对该视频的收藏",
+                "A": "video.player.favorite(collect = False)"
+            },
+            {
+                "Q": "将这部剧添加到我的收藏",
+                "A": "video.player.favorite(collect = True)"
+            },
+            {
+                "Q": "移除对这部剧的收藏",
+                "A": "video.player.favorite(collect = False)"
+            },
+            {
+                "Q": "收藏这个视频到我的列表",
+                "A": "video.player.favorite(collect = True)"
+            },
+            {
+                "Q": "取消收藏该视频",
+                "A": "video.player.favorite(collect = False)"
+            },
+            {
+                "Q": "把该视频从收藏中移除",
+                "A": "video.player.favorite(collect = False)"
+            },
+            {
+                "Q": "将这个视频放入收藏夹",
+                "A": "video.player.favorite(collect = True)"
+            },
+            {
+                "Q": "将剧集添加到收藏夹",
+                "A": "video.player.favorite(collect = True)"
+            },
+            {
+                "Q": "从收藏夹中移除该视频",
+                "A": "video.player.favorite(collect = False)"
+            },
+            {
+                "Q": "添加视频到我的收藏夹",
+                "A": "video.player.favorite(collect = True)"
+            },
+            {
+                "Q": "取消对该剧集的收藏",
+                "A": "video.player.favorite(collect = False)"
+            }
+        ]
+    },
+    {
+        "name": "video.favorite.open",
+        "description": "# 打开指定收藏目录的视频\ndef video.favorite.open(folder: string):\n# folder: 收藏夹名",
+        "qa": [
+            {
+                "Q": "打开一下收藏列表<周星驰电影>",
+                "A": "video.favorite.open(folder = 周星驰电影)"
+            },
+            {
+                "Q": "查看我的收藏夹<经典科幻片>",
+                "A": "video.favorite.open(folder = 经典科幻片)"
+            },
+            {
+                "Q": "打开收藏夹<热门剧集>",
+                "A": "video.favorite.open(folder = 热门剧集)"
+            },
+            {
+                "Q": "查看收藏夹<2023热播电影>",
+                "A": "video.favorite.open(folder = 2023热播电影)"
+            },
+            {
+                "Q": "打开收藏的文件夹<我的最爱>",
+                "A": "video.favorite.open(folder = 我的最爱)"
+            },
+            {
+                "Q": "查看一下收藏夹<喜剧片>",
+                "A": "video.favorite.open(folder = 喜剧片)"
+            },
+            {
+                "Q": "帮我打开收藏夹<经典动画>",
+                "A": "video.favorite.open(folder = 经典动画)"
+            },
+            {
+                "Q": "打开我的收藏目录<华语大片>",
+                "A": "video.favorite.open(folder = 华语大片)"
+            },
+            {
+                "Q": "查找我的收藏夹<纪录片合集>",
+                "A": "video.favorite.open(folder = 纪录片合集)"
+            },
+            {
+                "Q": "打开收藏文件夹<欧美动作片>",
+                "A": "video.favorite.open(folder = 欧美动作片)"
+            },
+            {
+                "Q": "查看我的视频收藏夹<历史剧>",
+                "A": "video.favorite.open(folder = 历史剧)"
+            },
+            {
+                "Q": "打开我的收藏列表<热门综艺>",
+                "A": "video.favorite.open(folder = 热门综艺)"
+            },
+            {
+                "Q": "打开我收藏的<经典电影>目录",
+                "A": "video.favorite.open(folder = 经典电影)"
+            },
+            {
+                "Q": "浏览一下收藏夹<悬疑片合集>",
+                "A": "video.favorite.open(folder = 悬疑片合集)"
+            },
+            {
+                "Q": "查看视频收藏夹<音乐视频>",
+                "A": "video.favorite.open(folder = 音乐视频)"
+            },
+            {
+                "Q": "查找一下我的收藏目录<科幻电影>",
+                "A": "video.favorite.open(folder = 科幻电影)"
+            }
+        ]
+    },
+    {
+        "name": "video.login",
+        "description": "# 登录选项\ndef video.login(mode: boolean):\n# mode: True为登录，False为退出登录",
+        "qa": [
+            {
+                "Q": "登录我的视频账号",
+                "A": "video.login(mode = True)"
+            },
+            {
+                "Q": "退出当前账户",
+                "A": "video.login(mode = False)"
+            },
+            {
+                "Q": "进入登录页面并登录",
+                "A": "video.login(mode = True)"
+            },
+            {
+                "Q": "登出视频软件",
+                "A": "video.login(mode = False)"
+            },
+            {
+                "Q": "我想切换到另一个账号",
+                "A": "video.login(mode = False)"
+            },
+            {
+                "Q": "开始视频软件登录",
+                "A": "video.login(mode = True)"
+            },
+            {
+                "Q": "退出视频软件的登录",
+                "A": "video.login(mode = False)"
+            },
+            {
+                "Q": "使用我的账号登录",
+                "A": "video.login(mode = True)"
+            },
+            {
+                "Q": "注销当前登录状态",
+                "A": "video.login(mode = False)"
+            },
+            {
+                "Q": "登录视频应用",
+                "A": "video.login(mode = True)"
+            },
+            {
+                "Q": "退出应用登录状态",
+                "A": "video.login(mode = False)"
+            },
+            {
+                "Q": "打开账号登录界面并登录",
+                "A": "video.login(mode = True)"
+            },
+            {
+                "Q": "登录并进入视频软件",
+                "A": "video.login(mode = True)"
+            },
+            {
+                "Q": "登出账号并退出软件",
+                "A": "video.login(mode = False)"
+            }
+        ]
+    },
+    {
+        "name": "video.up.open",
+        "description": "# 关注的up主的视频\ndef video.up.open(name: string, play: boolean):\n# name: up主名\n# play: True为播放，False为打开列表",
+        "qa": [
+            {
+                "Q": "播放up主<老番茄>的视频",
+                "A": "video.up.open(name = 老番茄, play = True)"
+            },
+            {
+                "Q": "打开up主<小片片说大片>的视频列表",
+                "A": "video.up.open(name = 小片片说大片, play = False)"
+            },
+            {
+                "Q": "播放我关注的up主<敬汉卿>的最新视频",
+                "A": "video.up.open(name = 敬汉卿, play = True)"
+            },
+            {
+                "Q": "查看up主<机智的党妹>的所有视频",
+                "A": "video.up.open(name = 机智的党妹, play = False)"
+            },
+            {
+                "Q": "播放up主<黑桐谷歌>上传的视频",
+                "A": "video.up.open(name = 黑桐谷歌, play = True)"
+            },
+            {
+                "Q": "帮我打开up主<胖龙的小生活>的视频列表",
+                "A": "video.up.open(name = 胖龙的小生活, play = False)"
+            },
+            {
+                "Q": "播放up主<老番茄>的最近更新",
+                "A": "video.up.open(name = 老番茄, play = True)"
+            },
+            {
+                "Q": "打开up主<翔翔大作战>的视频列表",
+                "A": "video.up.open(name = 翔翔大作战, play = False)"
+            },
+            {
+                "Q": "看看up主<花少北>发布的新视频",
+                "A": "video.up.open(name = 花少北, play = True)"
+            },
+            {
+                "Q": "打开我关注的up主<老番茄>的视频页面",
+                "A": "video.up.open(name = 老番茄, play = False)"
+            },
+            {
+                "Q": "播放UP主<逍遥散人>的搞笑视频",
+                "A": "video.up.open(name = 逍遥散人, play = True)"
+            },
+            {
+                "Q": "播放UP主<李子柒>的生活记录视频",
+                "A": "video.up.open(name = 李子柒, play = True)"
+            },
+            {
+                "Q": "播放up主<徐大虾咯>最近更新的视频",
+                "A": "video.up.open(name = 徐大虾咯, play = True)"
+            },
+            {
+                "Q": "播放up主<乃一捂啊>发布的娱乐八卦",
+                "A": "video.up.open(name = 乃一捂啊, play = True)"
+            },
+            {
+                "Q": "打开up主<盗月社食遇记>的美食视频列表",
+                "A": "video.up.open(name = 盗月社食遇记, play = False)"
+            },
+            {
+                "Q": "播放我关注的UP主<哔哩哔哩电影>的最新解说",
+                "A": "video.up.open(name = 哔哩哔哩电影, play = True)"
+            },
+            {
+                "Q": "打开UP主<老师好我叫何同学>的科技测评视频",
+                "A": "video.up.open(name = 老师好我叫何同学, play = True)"
+            },
+            {
+                "Q": "播放up主<老番茄>发布的最新一期",
+                "A": "video.up.open(name = 老番茄, play = True)"
+            },
+            {
+                "Q": "打开UP主<三三酱>的最新游戏视频列表",
+                "A": "video.up.open(name = 三三酱, play = True)"
+            },
+            {
+                "Q": "看看up主<老E>最近发布的游戏解说视频列表",
+                "A": "video.up.open(name = 老E, play = False)"
+            }
+        ]
+    },
+    {
+        "name": "video.recent.open",
+        "description": "# 最近看的视频\ndef video.recent.open():",
+        "qa": [
+            {
+                "Q": "打开最近看的视频",
+                "A": "video.up.open(name = 老E, play = False)"
+            },
+            {
+                "Q": "查看我最近播放的视频",
+                "A": "video.up.open(name = 老E, play = False)"
+            },
+            {
+                "Q": "继续播放上次看的视频",
+                "A": "video.up.open(name = 老E, play = False)"
+            },
+            {
+                "Q": "播放我上次观看的视频",
+                "A": "video.up.open(name = 老E, play = False)"
+            },
+            {
+                "Q": "重新播放我上次的视频",
+                "A": "video.up.open(name = 老E, play = False)"
+            },
+            {
+                "Q": "接着播放我刚才看的",
+                "A": "video.up.open(name = 老E, play = False)"
+            },
+            {
+                "Q": "继续上次没有看完的视频",
+                "A": "video.up.open(name = 老E, play = False)"
+            },
+            {
+                "Q": "打开我最近的播放记录",
+                "A": "video.up.open(name = 老E, play = False)"
+            },
+            {
+                "Q": "重新播放我刚才的视频",
+                "A": "video.up.open(name = 老E, play = False)"
+            },
+            {
+                "Q": "接着看上次的影片",
+                "A": "video.up.open(name = 老E, play = False)"
+            }
+        ]
+    },
+    {
+        "name": "video.later.open",
+        "description": "# 稍后再看的视频\ndef video.later.open():",
+        "qa": [
+            {
+                "Q": "添加到稍后再看的视频",
+                "A": "video.up.open(name = 老E, play = False)"
+            },
+            {
+                "Q": "保存视频以便稍后观看",
+                "A": "video.up.open(name = 老E, play = False)"
+            },
+            {
+                "Q": "将这个视频标记为稍后再看",
+                "A": "video.up.open(name = 老E, play = False)"
+            },
+            {
+                "Q": "把这个视频放入稍后再看列表",
+                "A": "video.up.open(name = 老E, play = False)"
+            },
+            {
+                "Q": "稍后再看这个视频",
+                "A": "video.up.open(name = 老E, play = False)"
+            },
+            {
+                "Q": "视频保存到稍后观看",
+                "A": "video.up.open(name = 老E, play = False)"
+            },
+            {
+                "Q": "以后再看这个视频",
+                "A": "video.up.open(name = 老E, play = False)"
+            },
+            {
+                "Q": "添加到稍后再看列表",
+                "A": "video.up.open(name = 老E, play = False)"
+            },
+            {
+                "Q": "等会儿再看这个视频",
+                "A": "video.up.open(name = 老E, play = False)"
+            },
+            {
+                "Q": "放到稍后再看里面",
+                "A": "video.up.open(name = 老E, play = False)"
+            }
+        ]
+    }
+]

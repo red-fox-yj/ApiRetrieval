@@ -1,0 +1,338 @@
+[
+    {
+        "name": "navigation.getHowLong",
+        "description": "# 获取当前导航还有多久时间抵达目的地\ndef navigation.getHowLong():\n",
+        "qa": [
+            {
+                "Q": "获取当前导航还有多久时间抵达目的地",
+                "A": "navigation.getHowLong()"
+            },
+            {
+                "Q": "还有多长时间到目的地",
+                "A": "navigation.getHowLong()"
+            },
+            {
+                "Q": "我还有多久能到达目的地",
+                "A": "navigation.getHowLong()"
+            },
+            {
+                "Q": "导航显示还有多少时间到达",
+                "A": "navigation.getHowLong()"
+            },
+            {
+                "Q": "问一下还有多久能到终点",
+                "A": "navigation.getHowLong()"
+            },
+            {
+                "Q": "现在距离目的地还有多长时间",
+                "A": "navigation.getHowLong()"
+            },
+            {
+                "Q": "到达终点还需要多久时间",
+                "A": "navigation.getHowLong()"
+            },
+            {
+                "Q": "看看导航显示的剩余时间",
+                "A": "navigation.getHowLong()"
+            },
+            {
+                "Q": "导航里还有多少时间到终点",
+                "A": "navigation.getHowLong()"
+            },
+            {
+                "Q": "现在还有多少时间能到达目的地",
+                "A": "navigation.getHowLong()"
+            },
+            {
+                "Q": "抵达目的地还需要多长时间",
+                "A": "navigation.getHowLong()"
+            },
+            {
+                "Q": "现在到目的地还有多久",
+                "A": "navigation.getHowLong()"
+            },
+            {
+                "Q": "查看导航剩余的时间",
+                "A": "navigation.getHowLong()"
+            },
+            {
+                "Q": "到达目的地还剩多少时间",
+                "A": "navigation.getHowLong()"
+            },
+            {
+                "Q": "终点还要多久能到",
+                "A": "navigation.getHowLong()"
+            },
+            {
+                "Q": "还有多久能到达导航目的地",
+                "A": "navigation.getHowLong()"
+            },
+            {
+                "Q": "现在导航显示还有多长时间",
+                "A": "navigation.getHowLong()"
+            },
+            {
+                "Q": "导航目的地距离还有多久",
+                "A": "navigation.getHowLong()"
+            },
+            {
+                "Q": "剩余时间还有多长",
+                "A": "navigation.getHowLong()"
+            },
+            {
+                "Q": "查看当前导航的剩余时间",
+                "A": "navigation.getHowLong()"
+            }
+        ]
+    },
+    {
+        "name": "navigation.getHowFar",
+        "description": "# 获取当前导航还有多长距离抵达目的地\ndef navigation.getHowFar():\n",
+        "qa": [
+            {
+                "Q": "获取当前导航还有多长距离抵达目的地",
+                "A": "navigation.getHowFar()"
+            },
+            {
+                "Q": "还剩多远能到目的地",
+                "A": "navigation.getHowFar()"
+            },
+            {
+                "Q": "现在到终点还有多远",
+                "A": "navigation.getHowFar()"
+            },
+            {
+                "Q": "导航显示还有多少距离到终点",
+                "A": "navigation.getHowFar()"
+            },
+            {
+                "Q": "目的地还有多长距离",
+                "A": "navigation.getHowFar()"
+            },
+            {
+                "Q": "现在距离终点还有多远",
+                "A": "navigation.getHowFar()"
+            },
+            {
+                "Q": "问一下到终点还剩多少距离",
+                "A": "navigation.getHowFar()"
+            },
+            {
+                "Q": "导航里还有多长路程",
+                "A": "navigation.getHowFar()"
+            },
+            {
+                "Q": "还有多远可以到达终点",
+                "A": "navigation.getHowFar()"
+            },
+            {
+                "Q": "现在距离目的地还有多少距离",
+                "A": "navigation.getHowFar()"
+            },
+            {
+                "Q": "到达目的地还有多远",
+                "A": "navigation.getHowFar()"
+            },
+            {
+                "Q": "看看现在导航显示的剩余距离",
+                "A": "navigation.getHowFar()"
+            },
+            {
+                "Q": "查看导航剩下的路程",
+                "A": "navigation.getHowFar()"
+            },
+            {
+                "Q": "距离终点还剩多少路程",
+                "A": "navigation.getHowFar()"
+            },
+            {
+                "Q": "终点还有多远能到",
+                "A": "navigation.getHowFar()"
+            },
+            {
+                "Q": "到导航目的地还有多长距离",
+                "A": "navigation.getHowFar()"
+            },
+            {
+                "Q": "现在导航显示的剩余距离是多少",
+                "A": "navigation.getHowFar()"
+            },
+            {
+                "Q": "还有多少路程到目的地",
+                "A": "navigation.getHowFar()"
+            },
+            {
+                "Q": "查看当前导航的剩余距离",
+                "A": "navigation.getHowFar()"
+            },
+            {
+                "Q": "现在到目的地还有多远",
+                "A": "navigation.getHowFar()"
+            }
+        ]
+    },
+    {
+        "name": "navigation.deleteMidWay",
+        "description": "# 删除导航的途经点\ndef navigation.deleteMidWay(Address: string):\n# Address: 途经点名",
+        "qa": [
+            {
+                "Q": "删除途经点<休息站>",
+                "A": "navigation.deleteMidWay(Address = 休息站)"
+            },
+            {
+                "Q": "取消途经点<加油站>",
+                "A": "navigation.deleteMidWay(Address = 加油站)"
+            },
+            {
+                "Q": "从导航中移除<便利店>作为途经点",
+                "A": "navigation.deleteMidWay(Address = 便利店)"
+            },
+            {
+                "Q": "删除<中途餐馆>这个途经点",
+                "A": "navigation.deleteMidWay(Address = 中途餐馆)"
+            },
+            {
+                "Q": "把<停车场>从途经点中删除",
+                "A": "navigation.deleteMidWay(Address = 停车场)"
+            },
+            {
+                "Q": "移除<快餐店>作为中途地点",
+                "A": "navigation.deleteMidWay(Address = 快餐店)"
+            },
+            {
+                "Q": "取消导航中的<超市>途经点",
+                "A": "navigation.deleteMidWay(Address = 超市)"
+            },
+            {
+                "Q": "不去<中途咖啡馆>，删除它",
+                "A": "navigation.deleteMidWay(Address = 中途咖啡馆)"
+            },
+            {
+                "Q": "从路线中移除<书店>作为途经点",
+                "A": "navigation.deleteMidWay(Address = 书店)"
+            },
+            {
+                "Q": "把<商场>从途经点列表中删除",
+                "A": "navigation.deleteMidWay(Address = 商场)"
+            },
+            {
+                "Q": "删除导航中的<加油站>",
+                "A": "navigation.deleteMidWay(Address = 加油站)"
+            },
+            {
+                "Q": "取消导航的途经点<公园>",
+                "A": "navigation.deleteMidWay(Address = 公园)"
+            },
+            {
+                "Q": "从导航中去掉<观光景点>作为途经点",
+                "A": "navigation.deleteMidWay(Address = 观光景点)"
+            },
+            {
+                "Q": "不去<便利店>了，删除它",
+                "A": "navigation.deleteMidWay(Address = 便利店)"
+            },
+            {
+                "Q": "移除<中途酒店>这个途经点",
+                "A": "navigation.deleteMidWay(Address = 中途酒店)"
+            },
+            {
+                "Q": "取消<购物中心>作为途经点",
+                "A": "navigation.deleteMidWay(Address = 购物中心)"
+            },
+            {
+                "Q": "删除导航中的<医院>途经点",
+                "A": "navigation.deleteMidWay(Address = 医院)"
+            },
+            {
+                "Q": "把导航的<学校>途经点取消",
+                "A": "navigation.deleteMidWay(Address = 学校)"
+            },
+            {
+                "Q": "从路径中移除<中途小店>",
+                "A": "navigation.deleteMidWay(Address = 中途小店)"
+            },
+            {
+                "Q": "删除<快餐店>作为途经点",
+                "A": "navigation.deleteMidWay(Address = 快餐店)"
+            }
+        ]
+    },
+    {
+        "name": "navigation.quitNavigation",
+        "description": "# 取消导航，退出导航，结束导航\ndef navigation.quitNavigation():",
+        "qa": [
+            {
+                "Q": "取消导航",
+                "A": "navigation.quitNavigation()"
+            },
+            {
+                "Q": "退出当前导航",
+                "A": "navigation.quitNavigation()"
+            },
+            {
+                "Q": "结束导航",
+                "A": "navigation.quitNavigation()"
+            },
+            {
+                "Q": "停止导航",
+                "A": "navigation.quitNavigation()"
+            },
+            {
+                "Q": "终止导航",
+                "A": "navigation.quitNavigation()"
+            },
+            {
+                "Q": "取消当前的导航",
+                "A": "navigation.quitNavigation()"
+            },
+            {
+                "Q": "关闭导航功能",
+                "A": "navigation.quitNavigation()"
+            },
+            {
+                "Q": "结束当前的导航路线",
+                "A": "navigation.quitNavigation()"
+            },
+            {
+                "Q": "退出这次导航",
+                "A": "navigation.quitNavigation()"
+            },
+            {
+                "Q": "取消当前行程的导航",
+                "A": "navigation.quitNavigation()"
+            },
+            {
+                "Q": "结束路线导航",
+                "A": "navigation.quitNavigation()"
+            },
+            {
+                "Q": "关闭当前的导航",
+                "A": "navigation.quitNavigation()"
+            },
+            {
+                "Q": "退出路线导航",
+                "A": "navigation.quitNavigation()"
+            },
+            {
+                "Q": "停止当前的导航",
+                "A": "navigation.quitNavigation()"
+            },
+            {
+                "Q": "取消导航服务",
+                "A": "navigation.quitNavigation()"
+            },
+            {
+                "Q": "终止导航操作",
+                "A": "navigation.quitNavigation()"
+            },
+            {
+                "Q": "停止导航功能",
+                "A": "navigation.quitNavigation()"
+            },
+            {
+                "Q": "退出导航模式",
+                "A": "navigation.quitNavigation()"
+            }
+        ]
+    }
+]

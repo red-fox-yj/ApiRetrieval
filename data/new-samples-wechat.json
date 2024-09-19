@@ -1,0 +1,506 @@
+[
+    {
+        "name": "wechat.getMessage",
+        "description": "# 通过微信获取指定联系人最新发来的消息，你可以联想一下获取到的内容，然后与其他api相结合\ndef wechat.getMessage(contact: string):\n# contact: 联系人名字",
+        "qa": [
+            {
+                "Q": "查看下<小王>发的消息",
+                "A": "wechat.getMessage(contact = 小王)"
+            },
+            {
+                "Q": "查一下<妈妈>刚发来的信息",
+                "A": "wechat.getMessage(contact = 妈妈)"
+            },
+            {
+                "Q": "帮我看看<张三>发的微信",
+                "A": "wechat.getMessage(contact = 张三)"
+            },
+            {
+                "Q": "获取<李老师>发来的消息",
+                "A": "wechat.getMessage(contact = 李老师)"
+            },
+            {
+                "Q": "查看<老板>发的最新消息",
+                "A": "wechat.getMessage(contact = 老板)"
+            },
+            {
+                "Q": "查找<朋友>发来的最新信息",
+                "A": "wechat.getMessage(contact = 朋友)"
+            },
+            {
+                "Q": "获取一下<同事>的最新微信消息",
+                "A": "wechat.getMessage(contact = 同事)"
+            },
+            {
+                "Q": "看看<小李>发给我的微信",
+                "A": "wechat.getMessage(contact = 小李)"
+            },
+            {
+                "Q": "查一下<爸爸>刚才发来的消息",
+                "A": "wechat.getMessage(contact = 爸爸)"
+            },
+            {
+                "Q": "查看下<同学>发的最新消息",
+                "A": "wechat.getMessage(contact = 同学)"
+            },
+            {
+                "Q": "获取一下<姐姐>发来的信息",
+                "A": "wechat.getMessage(contact = 姐姐)"
+            },
+            {
+                "Q": "帮我查一下<客户>的最新微信",
+                "A": "wechat.getMessage(contact = 客户)"
+            },
+            {
+                "Q": "看看<女朋友>发的最新信息",
+                "A": "wechat.getMessage(contact = 女朋友)"
+            },
+            {
+                "Q": "查一下<合伙人>刚发的微信",
+                "A": "wechat.getMessage(contact = 合伙人)"
+            },
+            {
+                "Q": "查看一下<朋友>发的消息",
+                "A": "wechat.getMessage(contact = 朋友)"
+            },
+            {
+                "Q": "获取<家人>发来的微信消息",
+                "A": "wechat.getMessage(contact = 家人)"
+            },
+            {
+                "Q": "看看<朋友A>发的最近消息",
+                "A": "wechat.getMessage(contact = 朋友A)"
+            },
+            {
+                "Q": "获取<同事>最新发的微信",
+                "A": "wechat.getMessage(contact = 同事)"
+            },
+            {
+                "Q": "查一下<上司>发来的消息",
+                "A": "wechat.getMessage(contact = 上司)"
+            },
+            {
+                "Q": "查看下<张伟>发的消息",
+                "A": "wechat.getMessage(contact = 张伟)"
+            }
+        ]
+    },
+    {
+        "name": "wechat.sendMessage",
+        "description": "# 通过微信发送指定内容给指定联系人，你可以联想一下发送的内容，然后与其他api相结合\ndef wechat.sendMessage(contact: string, content: string):\n# contact: 联系人名字\n# content: 消息内容",
+        "qa": [
+            {
+                "Q": "给<小王>发个消息'明天有空吗？'",
+                "A": "wechat.sendMessage(contact = 小王, content = 明天有空吗？)"
+            },
+            {
+                "Q": "发条信息给<张三>：'我们几点出发？'",
+                "A": "wechat.sendMessage(contact = 张三, content = 我们几点出发？)"
+            },
+            {
+                "Q": "给<李老师>发消息'作业什么时候交？'",
+                "A": "wechat.sendMessage(contact = 李老师, content = 作业什么时候交？)"
+            },
+            {
+                "Q": "发送消息给<老板>：'今天的会议几点开始？'",
+                "A": "wechat.sendMessage(contact = 老板, content = 今天的会议几点开始？)"
+            },
+            {
+                "Q": "发条消息给<妈妈>：'晚上吃什么？'",
+                "A": "wechat.sendMessage(contact = 妈妈, content = 晚上吃什么？)"
+            },
+            {
+                "Q": "给<朋友>发微信'周末有安排吗？'",
+                "A": "wechat.sendMessage(contact = 朋友, content = 周末有安排吗？)"
+            },
+            {
+                "Q": "发个消息给<同事>：'项目进展如何？'",
+                "A": "wechat.sendMessage(contact = 同事, content = 项目进展如何？)"
+            },
+            {
+                "Q": "发送微信给<爸爸>：'今天记得买牛奶'",
+                "A": "wechat.sendMessage(contact = 爸爸, content = 今天记得买牛奶)"
+            },
+            {
+                "Q": "发个信息给<女朋友>：'一起吃饭吧'",
+                "A": "wechat.sendMessage(contact = 女朋友, content = 一起吃饭吧)"
+            },
+            {
+                "Q": "给<姐姐>发条消息：'明天的聚会几点开始？'",
+                "A": "wechat.sendMessage(contact = 姐姐, content = 明天的聚会几点开始？)"
+            },
+            {
+                "Q": "发消息给<客户>：'合同已经发过去了，请确认'",
+                "A": "wechat.sendMessage(contact = 客户, content = 合同已经发过去了，请确认)"
+            },
+            {
+                "Q": "发个微信给<同学>：'今天你什么时候有空？'",
+                "A": "wechat.sendMessage(contact = 同学, content = 今天你什么时候有空？)"
+            },
+            {
+                "Q": "给<好友>发条微信：'周六打球去吗？'",
+                "A": "wechat.sendMessage(contact = 好友, content = 周六打球去吗？)"
+            },
+            {
+                "Q": "发个消息给<小李>：'今晚一起加班吗？'",
+                "A": "wechat.sendMessage(contact = 小李, content = 今晚一起加班吗？)"
+            },
+            {
+                "Q": "给<张伟>发个消息：'我们周末去爬山吗？'",
+                "A": "wechat.sendMessage(contact = 张伟, content = 我们周末去爬山吗？)"
+            },
+            {
+                "Q": "发送信息给<老婆>：'晚饭想吃什么？'",
+                "A": "wechat.sendMessage(contact = 老婆, content = 晚饭想吃什么？)"
+            },
+            {
+                "Q": "发微信给<同事A>：'明天的会议资料准备好了吗？'",
+                "A": "wechat.sendMessage(contact = 同事A, content = 明天的会议资料准备好了吗？)"
+            },
+            {
+                "Q": "发条信息给<上司>：'明天几点开会？'",
+                "A": "wechat.sendMessage(contact = 上司, content = 明天几点开会？)"
+            },
+            {
+                "Q": "发个消息给<合伙人>：'合作细节有任何变更吗？'",
+                "A": "wechat.sendMessage(contact = 合伙人, content = 合作细节有任何变更吗？)"
+            },
+            {
+                "Q": "发送消息给<朋友B>：'有时间聊一下吗？'",
+                "A": "wechat.sendMessage(contact = 朋友B, content = 有时间聊一下吗？)"
+            }
+        ]
+    },
+    {
+        "name": "wechat.call",
+        "description": "# 打语音电话，语音电话\ndef wechat.call(contact: string):\n# contact: 联系人名字",
+        "qa": [
+            {
+                "Q": "给<小王>打个电话",
+                "A": "wechat.call(contact = 小王)"
+            },
+            {
+                "Q": "打电话给<张三>",
+                "A": "wechat.call(contact = 张三)"
+            },
+            {
+                "Q": "给<妈妈>打个语音电话",
+                "A": "wechat.call(contact = 妈妈)"
+            },
+            {
+                "Q": "联系<老板>打个语音",
+                "A": "wechat.call(contact = 老板)"
+            },
+            {
+                "Q": "给<朋友>打语音电话",
+                "A": "wechat.call(contact = 朋友)"
+            },
+            {
+                "Q": "拨打语音给<李老师>",
+                "A": "wechat.call(contact = 李老师)"
+            },
+            {
+                "Q": "给<同事>打个微信电话",
+                "A": "wechat.call(contact = 同事)"
+            },
+            {
+                "Q": "用语音通话联系<爸爸>",
+                "A": "wechat.call(contact = 爸爸)"
+            },
+            {
+                "Q": "打个语音给<女朋友>",
+                "A": "wechat.call(contact = 女朋友)"
+            },
+            {
+                "Q": "给<同学>打个电话",
+                "A": "wechat.call(contact = 同学)"
+            },
+            {
+                "Q": "联系<姐姐>语音通话",
+                "A": "wechat.call(contact = 姐姐)"
+            },
+            {
+                "Q": "给<客户>打语音电话",
+                "A": "wechat.call(contact = 客户)"
+            },
+            {
+                "Q": "给<好友>打个电话",
+                "A": "wechat.call(contact = 好友)"
+            },
+            {
+                "Q": "打电话给<小李>",
+                "A": "wechat.call(contact = 小李)"
+            },
+            {
+                "Q": "用微信打语音给<爸爸>",
+                "A": "wechat.call(contact = 爸爸)"
+            },
+            {
+                "Q": "打个电话给<老板>",
+                "A": "wechat.call(contact = 老板)"
+            },
+            {
+                "Q": "拨打语音通话给<同事>",
+                "A": "wechat.call(contact = 同事)"
+            },
+            {
+                "Q": "联系<家人>打语音电话",
+                "A": "wechat.call(contact = 家人)"
+            },
+            {
+                "Q": "打电话给<合作伙伴>",
+                "A": "wechat.call(contact = 合作伙伴)"
+            },
+            {
+                "Q": "通过微信给<朋友A>打语音通话",
+                "A": "wechat.call(contact = 朋友A)"
+            }
+        ]
+    },
+    {
+        "name": "wechat.moments.view.others",
+        "description": "# 查看别人的朋友圈\ndef wechat.moments.view.others(contact: string):\n# contact: 联系人名字",
+        "qa": [
+            {
+                "Q": "看看<小王>的朋友圈",
+                "A": "wechat.moments.view.others(contact = 小王)"
+            },
+            {
+                "Q": "查看<张三>的最新朋友圈",
+                "A": "wechat.moments.view.others(contact = 张三)"
+            },
+            {
+                "Q": "帮我查一下<李老师>的朋友圈",
+                "A": "wechat.moments.view.others(contact = 李老师)"
+            },
+            {
+                "Q": "打开<朋友>的朋友圈看看",
+                "A": "wechat.moments.view.others(contact = 朋友)"
+            },
+            {
+                "Q": "查看一下<妈妈>最近发的朋友圈",
+                "A": "wechat.moments.view.others(contact = 妈妈)"
+            },
+            {
+                "Q": "查找<老板>的朋友圈更新",
+                "A": "wechat.moments.view.others(contact = 老板)"
+            },
+            {
+                "Q": "帮我看下<同事>发了什么朋友圈",
+                "A": "wechat.moments.view.others(contact = 同事)"
+            },
+            {
+                "Q": "看看<爸爸>的朋友圈内容",
+                "A": "wechat.moments.view.others(contact = 爸爸)"
+            },
+            {
+                "Q": "查看<女朋友>的最新朋友圈",
+                "A": "wechat.moments.view.others(contact = 女朋友)"
+            },
+            {
+                "Q": "查一下<好友>最近发的朋友圈",
+                "A": "wechat.moments.view.others(contact = 好友)"
+            },
+            {
+                "Q": "打开<小李>的朋友圈动态",
+                "A": "wechat.moments.view.others(contact = 小李)"
+            },
+            {
+                "Q": "查看一下<客户>的朋友圈更新",
+                "A": "wechat.moments.view.others(contact = 客户)"
+            },
+            {
+                "Q": "帮我看看<姐姐>最近发的朋友圈",
+                "A": "wechat.moments.view.others(contact = 姐姐)"
+            },
+            {
+                "Q": "查找<合伙人>的朋友圈状态",
+                "A": "wechat.moments.view.others(contact = 合伙人)"
+            },
+            {
+                "Q": "查看<朋友A>的朋友圈动态",
+                "A": "wechat.moments.view.others(contact = 朋友A)"
+            },
+            {
+                "Q": "查一下<合作伙伴>的朋友圈",
+                "A": "wechat.moments.view.others(contact = 合作伙伴)"
+            },
+            {
+                "Q": "帮我查下<好友B>最近发了什么朋友圈",
+                "A": "wechat.moments.view.others(contact = 好友B)"
+            }
+        ]
+    },
+    {
+        "name": "wechat.moments.send",
+        "description": "# 发朋友圈\ndef wechat.moments.send(content: string):\n# content: 朋友圈内容",
+        "qa": [
+            {
+                "Q": "发个朋友圈'好好享受周末'",
+                "A": "wechat.moments.send(content = 好好享受周末)"
+            },
+            {
+                "Q": "发条朋友圈说'今天心情不错'",
+                "A": "wechat.moments.send(content = 今天心情不错)"
+            },
+            {
+                "Q": "在朋友圈发一条消息：'刚看完一部好电影'",
+                "A": "wechat.moments.send(content = 刚看完一部好电影)"
+            },
+            {
+                "Q": "发个朋友圈状态：'忙碌的一天结束了'",
+                "A": "wechat.moments.send(content = 忙碌的一天结束了)"
+            },
+            {
+                "Q": "发朋友圈'今天的日落真美'",
+                "A": "wechat.moments.send(content = 今天的日落真美)"
+            },
+            {
+                "Q": "在朋友圈发布'新的一周开始了，加油！'",
+                "A": "wechat.moments.send(content = 新的一周开始了，加油！)"
+            },
+            {
+                "Q": "发条朋友圈内容：'和朋友们聚会很开心'",
+                "A": "wechat.moments.send(content = 和朋友们聚会很开心)"
+            },
+            {
+                "Q": "发个朋友圈：'享受美好的时光'",
+                "A": "wechat.moments.send(content = 享受美好的时光)"
+            },
+            {
+                "Q": "发布朋友圈：'终于完成了这个项目！'",
+                "A": "wechat.moments.send(content = 终于完成了这个项目！)"
+            },
+            {
+                "Q": "在朋友圈发个状态：'开始新的旅程'",
+                "A": "wechat.moments.send(content = 开始新的旅程)"
+            },
+            {
+                "Q": "发朋友圈：'今天做了美味的晚餐'",
+                "A": "wechat.moments.send(content = 今天做了美味的晚餐)"
+            },
+            {
+                "Q": "发一条朋友圈：'感谢所有支持我的人'",
+                "A": "wechat.moments.send(content = 感谢所有支持我的人)"
+            },
+            {
+                "Q": "发布朋友圈内容：'期待下次旅行！'",
+                "A": "wechat.moments.send(content = 期待下次旅行！)"
+            },
+            {
+                "Q": "发条朋友圈消息：'工作顺利完成'",
+                "A": "wechat.moments.send(content = 工作顺利完成)"
+            },
+            {
+                "Q": "发个朋友圈动态：'今天收获满满'",
+                "A": "wechat.moments.send(content = 今天收获满满)"
+            },
+            {
+                "Q": "在朋友圈分享：'看了一场精彩的比赛'",
+                "A": "wechat.moments.send(content = 看了一场精彩的比赛)"
+            },
+            {
+                "Q": "发布朋友圈：'未来可期！'",
+                "A": "wechat.moments.send(content = 未来可期！)"
+            },
+            {
+                "Q": "发条朋友圈：'今天真是个好天气'",
+                "A": "wechat.moments.send(content = 今天真是个好天气)"
+            },
+            {
+                "Q": "发个状态到朋友圈：'学习了一些新东西'",
+                "A": "wechat.moments.send(content = 学习了一些新东西)"
+            },
+            {
+                "Q": "在朋友圈发一条：'感谢这个特别的日子'",
+                "A": "wechat.moments.send(content = 感谢这个特别的日子)"
+            }
+        ]
+    },
+    {
+        "name": "wechat.sendRedPackage",
+        "description": "# 发微信红包\ndef wechat.sendRedPackage(contact: string, price: float):\n# contact: 联系人名字\n# price: 红包金额",
+        "qa": [
+            {
+                "Q": "给<小王>发个<18.88>元的红包",
+                "A": "wechat.sendRedPackage(contact = 小王, price = 18.88)"
+            },
+            {
+                "Q": "发个<50>元的红包给<张三>",
+                "A": "wechat.sendRedPackage(contact = 张三, price = 50)"
+            },
+            {
+                "Q": "给<李老师>发一个<100>元的红包",
+                "A": "wechat.sendRedPackage(contact = 李老师, price = 100)"
+            },
+            {
+                "Q": "给<朋友>发<66.66>元的微信红包",
+                "A": "wechat.sendRedPackage(contact = 朋友, price = 66.66)"
+            },
+            {
+                "Q": "发<88.88>元的红包给<同事>",
+                "A": "wechat.sendRedPackage(contact = 同事, price = 88.88)"
+            },
+            {
+                "Q": "发个<10>元的红包给<妈妈>",
+                "A": "wechat.sendRedPackage(contact = 妈妈, price = 10)"
+            },
+            {
+                "Q": "给<老板>发一个<200>元的红包",
+                "A": "wechat.sendRedPackage(contact = 老板, price = 200)"
+            },
+            {
+                "Q": "给<好友>发个<5.20>元的微信红包",
+                "A": "wechat.sendRedPackage(contact = 好友, price = 5.2)"
+            },
+            {
+                "Q": "发<99.99>元的红包给<姐姐>",
+                "A": "wechat.sendRedPackage(contact = 姐姐, price = 99.99)"
+            },
+            {
+                "Q": "给<爸爸>发<188>元的红包",
+                "A": "wechat.sendRedPackage(contact = 爸爸, price = 188)"
+            },
+            {
+                "Q": "发一个<50>元的微信红包给<小李>",
+                "A": "wechat.sendRedPackage(contact = 小李, price = 50)"
+            },
+            {
+                "Q": "给<客户>发个<200>元的红包",
+                "A": "wechat.sendRedPackage(contact = 客户, price = 200)"
+            },
+            {
+                "Q": "发一个<8.88>元的红包给<同学>",
+                "A": "wechat.sendRedPackage(contact = 同学, price = 8.88)"
+            },
+            {
+                "Q": "给<小明>发<6.66>元的红包",
+                "A": "wechat.sendRedPackage(contact = 小明, price = 6.66)"
+            },
+            {
+                "Q": "发<300>元的红包给<好友A>",
+                "A": "wechat.sendRedPackage(contact = 好友A, price = 300)"
+            },
+            {
+                "Q": "给<哥哥>发个<20>元的微信红包",
+                "A": "wechat.sendRedPackage(contact = 哥哥, price = 20)"
+            },
+            {
+                "Q": "发<128>元的红包给<合作伙伴>",
+                "A": "wechat.sendRedPackage(contact = 合作伙伴, price = 128)"
+            },
+            {
+                "Q": "给<妻子>发<520>元的红包",
+                "A": "wechat.sendRedPackage(contact = 妻子, price = 520)"
+            },
+            {
+                "Q": "发一个<10>元的红包给<同事A>",
+                "A": "wechat.sendRedPackage(contact = 同事A, price = 10)"
+            },
+            {
+                "Q": "发<68.88>元的红包给<朋友B>",
+                "A": "wechat.sendRedPackage(contact = 朋友B, price = 68.88)"
+            }
+        ]
+    }
+]

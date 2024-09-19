@@ -17,26 +17,30 @@ import os
 def add_eos(input_examples, eos_token):
     return [input_example + eos_token for input_example in input_examples]
 
-def load_qa_from_json(json_file):
-    """使用 ijson 库从大型 JSON 文件中流式加载 Q 和 A 对，并将 `name` 附加到每个 QA 对象中"""
-    print("Loading QA pairs from JSON file...")
+def load_qa_from_json_list(json_files):
+    """使用 ijson 库从多个 JSON 文件中流式加载 Q 和 A 对，并将 `name` 附加到每个 QA 对象中"""
+    print("Loading QA pairs from JSON file list...")
     questions = []
     qa_pairs = []
 
-    with open(json_file, 'r', encoding='utf-8') as file:
-        parser = ijson.items(file, 'item')
-        
-        for item in parser:
-            name = item.get('name', 'default_name')  # 获取外层的 `name` 字段，若缺失则使用默认值
-            qa_list = item.get('qa', [])  # 获取 `qa` 列表
+    # 遍历每个 JSON 文件
+    for json_file in json_files:
+        print(f"Processing file: {json_file}")
+        with open(json_file, 'r', encoding='utf-8') as file:
+            parser = ijson.items(file, 'item')
 
-            for qa in qa_list:
-                qa['name'] = name  # 将 `name` 附加到每个 QA 对象中
-                questions.append(qa["Q"])  # 提取问题并存储
-                qa_pairs.append(qa)  # 存储整个 QA 对象
-    
-    print(f"Loaded {len(qa_pairs)} QA pairs.")
+            for item in parser:
+                name = item.get('name', 'default_name')  # 获取外层的 `name` 字段，若缺失则使用默认值
+                qa_list = item.get('qa', [])  # 获取 `qa` 列表
+
+                for qa in qa_list:
+                    qa['name'] = name  # 将 `name` 附加到每个 QA 对象中
+                    questions.append(qa["Q"])  # 提取问题并存储
+                    qa_pairs.append(qa)  # 存储整个 QA 对象
+
+    print(f"Loaded {len(qa_pairs)} QA pairs from {len(json_files)} files.")
     return qa_pairs, questions
+
 
 def create_faiss_index(embeddings):
     """创建 Faiss 索引"""
@@ -200,7 +204,9 @@ def plot_and_save_tsne(embeddings, labels, model_name, test_size, save_path="t-s
                     label=label, color=label_color_map[label], alpha=0.7)
 
     plt.title(f"t-SNE plot for {model_name}, test_size={test_size}")
-    plt.legend(loc='best')
+
+    # 将图例移动到图的外部
+    plt.legend(loc='center left', bbox_to_anchor=(1, 0.5), title="Labels")
     
     # 创建保存路径
     model_save_path = os.path.join(save_path, model_name.replace("/", "_"))
@@ -208,7 +214,7 @@ def plot_and_save_tsne(embeddings, labels, model_name, test_size, save_path="t-s
     
     # 保存图像
     file_name = f"tsne_test_size_{test_size}.png"
-    plt.savefig(os.path.join(model_save_path, file_name))
+    plt.savefig(os.path.join(model_save_path, file_name), bbox_inches='tight')  # 保存时调整图像大小以适应图例
     plt.close()
 
 # nvidia/NV-Embed-v2
@@ -304,8 +310,8 @@ def main(model_name, ks=[3], test_sizes=[0.2]):
     elif model_name == 'dunzhang/stella_en_1.5B_v5':
         model_handler = ModelHandlerV3(model_name)
     
-    json_file = 'data/new-samples-music.json'
-    qa_pairs, questions = load_qa_from_json(json_file)
+    json_files = ['data/new-samples-music.json', 'data/new-samples-navigation.json', 'data/new-samples-video.json', 'data/new-samples-wechat.json']
+    qa_pairs, questions = load_qa_from_json_list(json_files)
     embeddings = model_handler.get_batch_embeddings(questions)
 
     all_results = {}
