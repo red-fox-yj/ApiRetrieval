@@ -361,7 +361,7 @@ def main(model_name, ks=[3], test_sizes=[0.2]):
         # 生成 t-SNE 图
         plot_and_save_tsne(embeddings_train, [qa['name'] for qa in qa_pairs_train], model_name, test_size, save_dir="t-sne/single")
 
-    save_results_to_json(all_results, f"result/single/{model_name.replace("/", "_")}_evaluation_results.json")
+    save_results_to_json(all_results, f"result/single/{model_name.replace('/', '_')}_evaluation_results.json")
 
 if __name__ == "__main__":
     test_sizes = [0.25, 0.5, 0.75]

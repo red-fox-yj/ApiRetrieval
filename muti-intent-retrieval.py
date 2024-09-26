@@ -20,7 +20,7 @@ class ModelHandlerV1:
 
     def load_model(self, model_name):
         print(f"Loading model: {model_name}")
-        model = SentenceTransformer(model_name, trust_remote_code=True)
+        model = SentenceTransformer('/remote-home1/share/models/NV-Embed-v2', trust_remote_code=True)
         model.max_seq_length = 32768
         model.tokenizer.padding_side = "right"
         print(f"Model {model_name} loaded.")
@@ -41,8 +41,8 @@ class ModelHandlerV1:
 # BAAI/bge-en-icl
 class ModelHandlerV2:
     def __init__(self, model_name):
-        self.model = AutoModel.from_pretrained(model_name)
-        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        self.model = AutoModel.from_pretrained('/remote-home1/share/models/bge-en-icl')
+        self.tokenizer = AutoTokenizer.from_pretrained('/remote-home1/share/models/bge-en-icl')
         self.model.eval().to('cuda')
 
     def get_batch_embeddings(self, texts, batch_size=32, prefix=None):
@@ -75,7 +75,7 @@ class ModelHandlerV2:
 # dunzhang/stella_en_1.5B_v5
 class ModelHandlerV3:
     def __init__(self, model_name, query_prompt_name="s2p_query"):
-        self.model = SentenceTransformer(model_name, trust_remote_code=True).cuda()
+        self.model = SentenceTransformer('/remote-home1/share/models/stella_en_1.5B_v5', trust_remote_code=True).cuda()
         self.query_prompt_name = query_prompt_name
 
     def get_batch_embeddings(self, texts, batch_size=32, prefix=None):
@@ -352,7 +352,7 @@ def main(model_name, json_file, ks=[3], intent_counts=[2], test_sizes=[0.2], sav
         plot_and_save_tsne(embeddings_train, qa_pairs_train, model_name, test_size, save_dir)
 
     # 保存评估结果到 JSON 文件
-    json_file_path = f"result/muti/{model_name.replace("/", "_")}_evaluation_results.json"
+    json_file_path = f"result/muti/{model_name.replace('/', '_')}_evaluation_results.json"
     save_results_to_json(all_results, json_file_path)
 
 
@@ -363,6 +363,6 @@ if __name__ == "__main__":
     test_sizes = [0.25, 0.5, 0.75]  # 设置不同的测试集比例
 
     # 评测三个不同的模型
-    main(model_name='nvidia/NV-Embed-v2', ks=ks, intent_counts=intent_counts, test_sizes=test_sizes, json_file=json_file)
-    main(model_name='BAAI/bge-en-icl', ks=ks, intent_counts=intent_counts, test_sizes=test_sizes, json_file=json_file)
-    # main(model_name='dunzhang/stella_en_1.5B_v5', ks=ks, intent_counts=intent_counts, test_sizes=test_sizes, json_file=json_file)
+    # main(model_name='nvidia/NV-Embed-v2', ks=ks, intent_counts=intent_counts, test_sizes=test_sizes, json_file=json_file)
+    # main(model_name='BAAI/bge-en-icl', ks=ks, intent_counts=intent_counts, test_sizes=test_sizes, json_file=json_file)
+    main(model_name='dunzhang/stella_en_1.5B_v5', ks=ks, intent_counts=intent_counts, test_sizes=test_sizes, json_file=json_file)
